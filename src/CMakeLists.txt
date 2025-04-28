@@ -1,0 +1,1 @@
+add_executable(Tarea2 main.cpp)
