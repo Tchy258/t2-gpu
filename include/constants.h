@@ -1,9 +1,12 @@
 // Game settings
+#ifndef CONSTANTS_H
+#define CONSTANTS_H
+
 #ifndef GRID_ROWS
-#define GRID_ROWS 1024
+#define GRID_ROWS 5
 #endif
 #ifndef GRID_COLS
-#define GRID_COLS 1024
+#define GRID_COLS 5
 #endif
 
 // GPU Settings
@@ -14,11 +17,4 @@
 #define BLOCK_SIZE_Y 32
 #endif
 
-// Macros for conditionally picking 1d or 2d arrays
-#ifdef ARRAY_2D
-    #define ARRAY_TYPE(T, NAME) T NAME[GRID_ROWS][GRID_COLS]
-    #define ARRAY_ACCESS(NAME, i, j)  NAME[i][j]
-#else
-    #define ARRAY_TYPE(T, NAME) T NAME[(GRID_ROWS)*(GRID_COLS)]
-    #define ARRAY_ACCESS(NAME, i, j)  NAME[(i)*(GRID_COLS) + (j)]
 #endif
