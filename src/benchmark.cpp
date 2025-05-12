@@ -1,6 +1,6 @@
 #include "benchmark.h"
 
-void benchmark(GameOfLife* game, int iterations, const std::string& fileName = "") {
+void benchmark(GameOfLife* game, int iterations, const std::string& fileName) {
     std::ofstream file;
     if (!fileName.empty()) {
         file = std::ofstream(fileName);
