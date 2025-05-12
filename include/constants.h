@@ -3,11 +3,15 @@
 #define CONSTANTS_H
 
 #ifndef GRID_ROWS
-#define GRID_ROWS 5
+#define GRID_ROWS (0b11111111111111111111111111111111)
 #endif
 #ifndef GRID_COLS
-#define GRID_COLS 5
+#define GRID_COLS (0b11111111111111111111111111111111)
 #endif
+
+//#ifndef ARRAY_2D
+//#define ARRAY_2D
+//#endif
 
 // GPU Settings
 #ifndef BLOCK_SIZE_X
