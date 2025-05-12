@@ -6,7 +6,7 @@
             "displayName": "GCC Release",
             "description": "Using compilers: C = C:\\msys64\\ucrt64\\bin\\gcc.exe, CXX = C:\\msys64\\ucrt64\\bin\\g++.exe",
             "generator": "MinGW Makefiles",
-            "binaryDir": "${sourceDir}/build/release/${presetName}",
+            "binaryDir": "${sourceDir}/build/${presetName}",
             "cacheVariables": {
                 "CMAKE_INSTALL_PREFIX": "${sourceDir}/out/install/${presetName}",
                 "CMAKE_C_COMPILER": "C:/msys64/ucrt64/bin/gcc.exe",
@@ -18,12 +18,26 @@
             "displayName": "GCC Debug",
             "description": "Using compilers: C = C:\\msys64\\ucrt64\\bin\\gcc.exe, CXX = C:\\msys64\\ucrt64\\bin\\g++.exe",
             "generator": "MinGW Makefiles",
-            "binaryDir": "${sourceDir}/build/debug/${presetName}",
+            "binaryDir": "${sourceDir}/build/${presetName}",
             "cacheVariables": {
                 "CMAKE_INSTALL_PREFIX": "${sourceDir}/out/install/${presetName}",
                 "CMAKE_C_COMPILER": "C:/msys64/ucrt64/bin/gcc.exe",
                 "CMAKE_CXX_COMPILER": "C:/msys64/ucrt64/bin/g++.exe",
                 "CMAKE_BUILD_TYPE": "Debug"
+            }
+        },
+        {
+            "name": "debug cpu",
+            "displayName": "GCC Debug CPU",
+            "description": "Using compilers: C = C:\\msys64\\ucrt64\\bin\\gcc.exe, CXX = C:\\msys64\\ucrt64\\bin\\g++.exe",
+            "generator": "MinGW Makefiles",
+            "binaryDir": "${sourceDir}/build/${presetName}",
+            "cacheVariables": {
+                "CMAKE_INSTALL_PREFIX": "${sourceDir}/out/install/${presetName}",
+                "CMAKE_C_COMPILER": "C:/msys64/ucrt64/bin/gcc.exe",
+                "CMAKE_CXX_COMPILER": "C:/msys64/ucrt64/bin/g++.exe",
+                "CMAKE_BUILD_TYPE": "Debug",
+                "USE_CPU_SERIAL": true
             }
         }
     ],
@@ -39,6 +53,12 @@
             "description": "",
             "displayName": "",
             "configurePreset": "debug"
+        },
+        {
+            "name": "debug cpu",
+            "description": "",
+            "displayName": "",
+            "configurePreset": "debug cpu"
         }
     ]
 }
