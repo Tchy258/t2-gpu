@@ -30,8 +30,8 @@ void GameOfLifeSerial::initialize() {
 }
 
 void GameOfLifeSerial::initializeRandom() {
-    std::random_device rd;
-    std::mt19937 gen(rd());
+    int seed = 123;
+    std::mt19937 gen(seed);
     std::uniform_real_distribution<> dis(0.0,1.0);
     for (int i = 0; i < GRID_ROWS; i++) {
         for (int j = 0; j < GRID_COLS; j++) {
@@ -46,9 +46,9 @@ void GameOfLifeSerial::initializeRandom() {
 
 void GameOfLifeSerial::step() {
     for (int y = 0; y < GRID_ROWS; ++y) {
-        unsigned int y0 = ((y + GRID_ROWS - 1) % GRID_COLS);
+        unsigned int y0 = ((y + GRID_ROWS - 1) % GRID_ROWS);
         unsigned int y1 = y;
-        unsigned int y2 = ((y + 1) % GRID_COLS);
+        unsigned int y2 = ((y + 1) % GRID_ROWS);
         for (int x = 0; x < GRID_COLS; ++x) {
             unsigned int x0 = (x + GRID_COLS - 1) % GRID_COLS;
             unsigned int x2 = (x + 1) % GRID_COLS;
