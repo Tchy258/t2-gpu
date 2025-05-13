@@ -20,7 +20,7 @@ public:
     void step() override;
     inline unsigned char countAliveCells(unsigned int x0, unsigned int x1, unsigned int x2,
                                         unsigned int y0, unsigned int y1, unsigned int y2) final;
-    const unsigned char* getGrid() const override;
+    ARRAY_TYPE(unsigned char,) getGrid() const override;
     friend std::ostream &operator<<(std::ostream &os, const GameOfLifeSerial &game);
 };
 

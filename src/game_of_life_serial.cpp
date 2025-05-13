@@ -62,7 +62,7 @@ void GameOfLifeSerial::step() {
 }
 
 
-const unsigned char* GameOfLifeSerial::getGrid() const {
+ARRAY_TYPE(unsigned char,) GameOfLifeSerial::getGrid() const {
     return grid;
 }
 

@@ -75,7 +75,7 @@ void GameOfLifeParallel::step() {
 }
 
 
-const unsigned char* GameOfLifeParallel::getGrid() const {
+ARRAY_TYPE(unsigned char,) GameOfLifeParallel::getGrid() const {
     return grid;
 }
 
