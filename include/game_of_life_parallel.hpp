@@ -14,7 +14,7 @@ private:
     ARRAY_TYPE(unsigned char, grid);
     ARRAY_TYPE(unsigned char, nextGrid);
     void setCellInNextGrid(unsigned int index);
-    unsigned int totalSize = GRID_COLS * GRID_ROWS;
+    unsigned long long totalSize = GRID_COLS * GRID_ROWS;
 
 public:
     GameOfLifeParallel();
