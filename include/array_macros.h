@@ -62,10 +62,7 @@
     #endif
 
     #ifdef USE_OPENCL
-        #include <CL/cl.h>
-
-        extern cl_context context;  // Must be initialized elsewhere
-        extern cl_command_queue queue;
+        
 
         #ifdef ARRAY_2D
             #define ARRAY_TYPE(T, NAME) cl_mem NAME
@@ -73,27 +70,25 @@
                 NAME = clCreateBuffer(context, CL_MEM_READ_WRITE,              \
                     GRID_ROWS * GRID_COLS * sizeof(T), nullptr, nullptr);     \
             } while (0)
-            #define ARRAY_ACCESS(NAME, i, j)                                    \
+            #define ARRAY_ACCESS(T, NAME, i, j)                                    \
                 ((T*)clEnqueueMapBuffer(queue, NAME, CL_TRUE, CL_MAP_READ | CL_MAP_WRITE, \
                 (i)*(GRID_COLS) + (j), sizeof(T), 0, nullptr, nullptr, nullptr))[(i)*(GRID_COLS) + (j)]
 
             #define ARRAY_DELETE(NAME) clReleaseMemObject(NAME)
 
         #else
-            #define ARRAY_TYPE(T, NAME) cl_mem NAME
-            #define ARRAY_ALLOC(T, NAME) do {                                    \
-                NAME = clCreateBuffer(context, CL_MEM_READ_WRITE,               \
-                    (GRID_ROWS) * (GRID_COLS) * sizeof(T), nullptr, nullptr);   \
-            } while (0)
-            #define ARRAY_ACCESS(NAME, i, j)                                    \
+            #define ARRAY_ALLOC(T, NAME) do {                                \
+                cl::Buffer buf  = cl::Buffer(context_cpp, CL_MEM_READ_WRITE,             \
+                                    sizeof(T)*GRID_ROWS*GRID_COLS);             \
+            } while(0)
+            #define ARRAY_TYPE(T, NAME) T NAME
+            #define ARRAY_ACCESS(T, NAME, i, j)                               \
                 ((T*)clEnqueueMapBuffer(queue, NAME, CL_TRUE, CL_MAP_READ | CL_MAP_WRITE, \
                 (i)*(GRID_COLS) + (j), sizeof(T), 0, nullptr, nullptr, nullptr))[(i)*(GRID_COLS) + (j)]
 
-            #define ARRAY_DELETE(NAME) clReleaseMemObject(NAME)
-
+            #define ARRAY_DELETE(NAME)
         #endif
 
     #endif
-
 
 #endif

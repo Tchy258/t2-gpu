@@ -1,11 +1,54 @@
 if (USE_OPENCL)
 
-add_executable(opencl_test opencl_test.cpp)
-target_compile_features(opencl_test PRIVATE cxx_auto_type)
+  add_library(Benchmark STATIC benchmark.cpp)
+  target_include_directories(Benchmark PRIVATE "${PROJECT_SOURCE_DIR}/include")
 
-target_include_directories(opencl_test PRIVATE "${CMAKE_SOURCE_DIR}/extern/OpenCL-Headers")
-target_link_libraries(opencl_test OpenCL::OpenCL)
+  option(OPENCL_ICD_LOADER_HEADERS_DIR
+  "Path to the OpenCL-Headers"
+  "${CMAKE_SOURCE_DIR}/extern/OpenCL-Headers")
 
+  add_library(OpenCLImplLib STATIC game_of_life_opencl.cpp)
+  target_include_directories(OpenCLImplLib
+    PUBLIC
+      "${PROJECT_SOURCE_DIR}/include"                       # tus .hpp
+      "${CMAKE_SOURCE_DIR}/extern/OpenCL-CLHPP/include"     # CL/opencl.hpp
+  )
+  target_link_libraries(OpenCLImplLib
+  PRIVATE
+    OpenCL::Headers    # para <CL/cl.h>
+    OpenCL::OpenCL     # la librería ICD loader
+  )
+    
+  add_executable(OpenCLBenchmark opencl_benchmark.cpp)
+  target_include_directories(OpenCLBenchmark
+    PRIVATE
+      "${PROJECT_SOURCE_DIR}/include"
+      "${CMAKE_SOURCE_DIR}/extern/OpenCL-CLHPP/include"
+  )
+  target_link_libraries(OpenCLBenchmark
+    OpenCLImplLib   # tu librería OpenCL+GameOfLife
+    Benchmark       # tu librería con la función benchmark()
+  )
+
+
+  add_executable(testOpenCL prueba.cpp)
+
+  target_include_directories(testOpenCL PRIVATE ${CMAKE_SOURCE_DIR}/extern/OpenCL-CLHPP/include)
+
+  target_link_libraries(testOpenCL
+  PRIVATE
+    OpenCL::Headers    # para <CL/cl.h>
+    OpenCL::OpenCL     # la librería ICD loader
+  )
+
+endif()
+
+if (USE_CUDA)
+  enable_language(CUDA)
+  add_executable(cuda_life game_of_life_cuda.cu)
+  target_compile_definitions(cuda_life PRIVATE USE_CUDA)
+  target_include_directories(cuda_life PRIVATE "${PROJECT_SOURCE_DIR}/include")
+  target_compile_features(cuda_life PRIVATE cxx_std_17)
 endif()
 
 if (USE_CPU)
@@ -36,6 +79,3 @@ if (USE_CPU)
 
 endif()
 
-if (USE_CUDA)
-# Poner aquí los ejecutables y librerías de cuda
-endif()

@@ -4,3 +4,6 @@
 [submodule "extern/OpenCL-ICD-Loader"]
 	path = extern/OpenCL-ICD-Loader
 	url = https://github.com/KhronosGroup/OpenCL-ICD-Loader
+[submodule "extern/OpenCL-CLHPP"]
+	path = extern/OpenCL-CLHPP
+	url = https://github.com/KhronosGroup/OpenCL-CLHPP.git
