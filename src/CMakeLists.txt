@@ -29,7 +29,7 @@ if (USE_OPENCL)
 endif()
 
 if (USE_CUDA)
-
+  enable_language(CUDA)
   add_library(cuda_life STATIC game_of_life_cuda.cu)
   #add_executable(cuda_life game_of_life_cuda.cu)
   target_include_directories(cuda_life PRIVATE "${PROJECT_SOURCE_DIR}/include")

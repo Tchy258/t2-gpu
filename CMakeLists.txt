@@ -2,11 +2,11 @@ cmake_minimum_required(VERSION 3.14.0)
 
 set(CMAKE_CXX_STANDARD 11)
 
-project(Tarea2 VERSION 0.1.0 LANGUAGES C CXX CUDA)
+project(Tarea2 VERSION 0.1.0 LANGUAGES C CXX)
 
-# if (USE_OPENCL)
-#   add_subdirectory(extern)
-# endif()
+if (USE_OPENCL)
+   add_subdirectory(extern)
+endif()
 
 add_subdirectory(src)
 
