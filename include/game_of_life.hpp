@@ -11,10 +11,11 @@ public:
 
     virtual void initialize() = 0;
     virtual void initializeRandom() = 0;
-    virtual unsigned char countAliveCells(unsigned int x0, unsigned int x1, unsigned int x2, 
-                                            unsigned int y0, unsigned int y1, unsigned int y2) = 0;
+    // virtual unsigned char countAliveCells(unsigned int x0, unsigned int x1, unsigned int x2, 
+    //                                         unsigned int y0, unsigned int y1, unsigned int y2) = 0;
     virtual void step() = 0;
-    virtual ARRAY_TYPE(unsigned char,) getGrid() const = 0;
+    //virtual ARRAY_TYPE(unsigned char,) getGrid() const = 0;
+
 };
 
 #endif

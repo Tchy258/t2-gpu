@@ -6,6 +6,7 @@
 #include <vector>
 #include <CL/opencl.hpp>
 
+
 using ubyte = unsigned char;
 
 struct CLBuffer {

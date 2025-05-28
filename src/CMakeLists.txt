@@ -29,11 +29,16 @@ if (USE_OPENCL)
 endif()
 
 if (USE_CUDA)
-  enable_language(CUDA)
-  add_executable(cuda_life game_of_life_cuda.cu)
-  target_compile_definitions(cuda_life PRIVATE USE_CUDA)
+
+  add_library(cuda_life STATIC game_of_life_cuda.cu)
+  #add_executable(cuda_life game_of_life_cuda.cu)
   target_include_directories(cuda_life PRIVATE "${PROJECT_SOURCE_DIR}/include")
-  target_compile_features(cuda_life PRIVATE cxx_std_17)
+
+  add_executable(CudaBenckmark cuda_benchmark.cpp)
+  target_include_directories(CudaBenckmark PRIVATE "${PROJECT_SOURCE_DIR}/include")
+  target_link_libraries(CudaBenckmark 
+    cuda_life
+    Benchmark)
 endif()
 
 if (USE_CPU)

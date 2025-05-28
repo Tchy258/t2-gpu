@@ -1,13 +1,15 @@
-cmake_minimum_required(VERSION 3.10.0)
+cmake_minimum_required(VERSION 3.14.0)
 
-project(Tarea2 VERSION 0.1.0 LANGUAGES C CXX)
+set(CMAKE_CXX_STANDARD 11)
 
-if (USE_OPENCL)
-  add_subdirectory(extern)
-endif()
+project(Tarea2 VERSION 0.1.0 LANGUAGES C CXX CUDA)
+
+# if (USE_OPENCL)
+#   add_subdirectory(extern)
+# endif()
 
 add_subdirectory(src)
 
-include(CTest)
-enable_testing()
+# include(CTest)
+# enable_testing()
 

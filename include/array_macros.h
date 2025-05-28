@@ -1,5 +1,6 @@
-#ifndef ARRAY_MACROS
-#define ARRAY_MACROS
+#ifndef ARRAY_MACROS_H
+#define ARRAY_MACROS_H
+
 #include "constants.h"
     #ifdef ARRAY_2D
         #define ARRAY_TYPE(T, NAME) T** NAME
