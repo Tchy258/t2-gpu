@@ -1,45 +1,30 @@
+add_library(Benchmark STATIC benchmark.cpp)
+target_include_directories(Benchmark PRIVATE "${PROJECT_SOURCE_DIR}/include")
 if (USE_OPENCL)
-
-  add_library(Benchmark STATIC benchmark.cpp)
-  target_include_directories(Benchmark PRIVATE "${PROJECT_SOURCE_DIR}/include")
-
-  option(OPENCL_ICD_LOADER_HEADERS_DIR
-  "Path to the OpenCL-Headers"
-  "${CMAKE_SOURCE_DIR}/extern/OpenCL-Headers")
+  add_library(ProjectHeaders INTERFACE)
+  target_include_directories(ProjectHeaders INTERFACE "${PROJECT_SOURCE_DIR}/include")
+  target_link_libraries(ProjectHeaders INTERFACE OpenCL-Headers OpenCL-CLHPP)
 
   add_library(OpenCLImplLib STATIC game_of_life_opencl.cpp)
-  target_include_directories(OpenCLImplLib
-    PUBLIC
-      "${PROJECT_SOURCE_DIR}/include"                       # tus .hpp
-      "${CMAKE_SOURCE_DIR}/extern/OpenCL-CLHPP/include"     # CL/opencl.hpp
-  )
+
+
   target_link_libraries(OpenCLImplLib
-  PRIVATE
-    OpenCL::Headers    # para <CL/cl.h>
-    OpenCL::OpenCL     # la librería ICD loader
-  )
-    
-  add_executable(OpenCLBenchmark opencl_benchmark.cpp)
-  target_include_directories(OpenCLBenchmark
     PRIVATE
-      "${PROJECT_SOURCE_DIR}/include"
-      "${CMAKE_SOURCE_DIR}/extern/OpenCL-CLHPP/include"
+      ProjectHeaders
+      OpenCL::OpenCL        # from ICD loader
   )
+
+  add_executable(OpenCLBenchmark opencl_benchmark.cpp)
   target_link_libraries(OpenCLBenchmark
-    OpenCLImplLib   # tu librería OpenCL+GameOfLife
-    Benchmark       # tu librería con la función benchmark()
+    PRIVATE
+      ProjectHeaders
+      OpenCLImplLib
+      Benchmark
   )
-
-
-  add_executable(testOpenCL prueba.cpp)
-
-  target_include_directories(testOpenCL PRIVATE ${CMAKE_SOURCE_DIR}/extern/OpenCL-CLHPP/include)
-
-  target_link_libraries(testOpenCL
-  PRIVATE
-    OpenCL::Headers    # para <CL/cl.h>
-    OpenCL::OpenCL     # la librería ICD loader
-  )
+  file(GLOB KERNEL_FILES "${CMAKE_SOURCE_DIR}/src/*.cl")
+  foreach(KERNEL_FILE ${KERNEL_FILES})
+      configure_file(${KERNEL_FILE} ${CMAKE_BINARY_DIR}/src/ COPYONLY)
+  endforeach()
 
 endif()
 
@@ -52,10 +37,6 @@ if (USE_CUDA)
 endif()
 
 if (USE_CPU)
-    add_compile_definitions(USE_CPU)
-
-    add_library(Benchmark STATIC benchmark.cpp)
-    target_include_directories(Benchmark PRIVATE "${PROJECT_SOURCE_DIR}/include")
 
     add_library(CPUSerialImpl STATIC game_of_life_serial.cpp)
     target_include_directories(CPUSerialImpl PRIVATE "${PROJECT_SOURCE_DIR}/include")

@@ -74,6 +74,7 @@ void GameOfLifeOpenCL::initializeRandom() {
     }
 }
 
+
 void GameOfLifeOpenCL::step() {
     size_t bytes = worldSize * sizeof(ubyte);
 
@@ -100,6 +101,17 @@ void GameOfLifeOpenCL::step() {
     std::swap(grid.dev,  nextGrid.dev);
 }
 
-// std::vector<ubyte> GameOfLifeOpenCL::getGrid() const {
-//     return grid.host;  // copia intencionada
-// }
+ARRAY_TYPE(unsigned char,) GameOfLifeOpenCL::getGrid() const {
+    #ifdef ARRAY_2D
+    size_t numRows = GRID_ROWS;
+    rowPtrs.clear();
+    rowPtrs.reserve(numRows);
+
+    for (size_t i = 0; i < numRows; ++i) {
+        rowPtrs.push_back(const_cast<ubyte*>(&grid.host[i * GRID_COLS]));
+    }
+
+    return rowPtrs.data();
+    #endif
+    return const_cast<ubyte*>(grid.host.data());
+}
