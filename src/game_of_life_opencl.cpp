@@ -32,7 +32,12 @@ void GameOfLifeOpenCL::initializeOpenCL() {
     queue_cpp   = cl::CommandQueue(context_cpp, devs[0], CL_QUEUE_PROFILING_ENABLE);
 
     // 3) Leer el kernel
-    std::ifstream sourceFile("kernel.cl");
+    #ifdef ARRAY_2D
+        std::ifstream sourceFile("kernel1D.cl");
+    #else
+        std::ifstream sourceFile("kernel2D.cl");
+    #endif
+    
     if (!sourceFile) throw std::runtime_error("Cannot open kernel file");
     std::string sourceCode( std::istreambuf_iterator<char>(sourceFile), (std::istreambuf_iterator<char>()));
     cl::Program::Sources src{{ sourceCode.c_str(), sourceCode.size() }};
