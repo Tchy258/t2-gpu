@@ -10,6 +10,6 @@ endif()
 
 add_subdirectory(src)
 
-# include(CTest)
-# enable_testing()
+include(CTest)
+enable_testing()
 
