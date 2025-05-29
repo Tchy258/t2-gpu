@@ -39,6 +39,11 @@ if (USE_CUDA)
   target_link_libraries(CudaBenckmark 
     cuda_life
     Benchmark)
+  
+  file(GLOB KERNEL_FILES "${CMAKE_SOURCE_DIR}/src/*.cu")
+  foreach(KERNEL_FILE ${KERNEL_FILES})
+      configure_file(${KERNEL_FILE} ${CMAKE_BINARY_DIR}/src/ COPYONLY)
+  endforeach()
 endif()
 
 if (USE_CPU)

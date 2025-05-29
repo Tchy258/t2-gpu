@@ -94,8 +94,16 @@ void GameOfLifeOpenCL::step() {
     lifeKernel.setArg(arg++, (cl_uint)GRID_ROWS);
 
     // 3) disparar kernel
+    #ifdef ARRAY_2D
+    size_t global_x = ((GRID_COLS + BLOCK_SIZE_X - 1) / BLOCK_SIZE_X) * BLOCK_SIZE_X;
+    size_t global_y = ((GRID_ROWS + BLOCK_SIZE_Y - 1) / BLOCK_SIZE_Y) * BLOCK_SIZE_Y;
+    cl::NDRange global(global_x, global_y);
+    cl::NDRange local(BLOCK_SIZE_X, BLOCK_SIZE_Y);
+    #else
+    cl::NDRange local(BLOCK_SIZE_X);
     cl::NDRange global(worldSize);
-    queue_cpp.enqueueNDRangeKernel(lifeKernel, cl::NullRange, global, cl::NullRange);
+    #endif
+    queue_cpp.enqueueNDRangeKernel(lifeKernel, cl::NullRange, global, local);
     queue_cpp.finish();
 
     // 4) leer nextGrid.dev -> nextGrid.host
@@ -117,6 +125,7 @@ ARRAY_TYPE(unsigned char,) GameOfLifeOpenCL::getGrid() const {
     }
 
     return rowPtrs.data();
-    #endif
+    #else
     return const_cast<ubyte*>(grid.host.data());
+    #endif
 }

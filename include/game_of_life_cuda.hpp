@@ -2,19 +2,20 @@
 #define GAME_OF_LIFE_CUDA_H
 
 #include "game_of_life.hpp"
-#include "constants.h"            // define GRID_ROWS, GRID_COLS
 #include <vector>
+#include <algorithm>
+#include <cstdio>
+#include <cstdlib>
 using ubyte = unsigned char;
 
 class GameOfLifeCUDA : public GameOfLife {
 public:
-    GameOfLifeCUDA();            // constructor por defecto
+    GameOfLifeCUDA();
     ~GameOfLifeCUDA();
 
-    void initialize() override;
-    void initializeRandom() override;
-    void step() override;
-
+    void initialize();
+    void initializeRandom();
+    void step();
     unsigned char countAliveCells(unsigned int x0, unsigned int x1, unsigned int x2, 
                                             unsigned int y0, unsigned int y1, unsigned int y2) {
                                                 throw std::logic_error("Counting should be done inside the kernel");
@@ -24,17 +25,27 @@ public:
     }
 
 private:
-    int rows, cols;
-    size_t worldSize, bytes;
-
-    std::vector<ubyte> h_grid, h_next;
-    ubyte *d_grid = nullptr, *d_next = nullptr;
-
-    int threadsPerBlock = BLOCK_SIZE_X*BLOCK_SIZE_Y;
-    int blocks;
-
     void allocDevice();
-    void freeDevice(); 
+    void freeDevice();
+    void uploadGrid();
+
+    unsigned long long rows, cols;
+    size_t worldSize;
+    size_t bytes;
+    unsigned long long blocks;
+
+    std::vector<ubyte> h_grid;
+    std::vector<ubyte> h_next;
+
+#ifdef ARRAY_2D
+    ubyte** d_grid = nullptr;
+    ubyte** d_next = nullptr;
+    std::vector<ubyte*> d_grid_rows;
+    std::vector<ubyte*> d_next_rows;
+#else
+    ubyte* d_grid = nullptr;
+    ubyte* d_next = nullptr;
+#endif
 };
 
 #endif
