@@ -1,5 +1,10 @@
 #include "game_of_life_cuda.hpp"
 #include <cuda_runtime.h>
+#ifdef ARRAY_2D
+    #include "cuda_kernel_2d.cu"
+#else
+    #include "cuda_kernel_1d.cu"
+#endif
 
 
 static void checkCuda(cudaError_t err, const char* msg) {
@@ -15,7 +20,7 @@ GameOfLifeCUDA::GameOfLifeCUDA()
       bytes(worldSize * sizeof(ubyte)),
       h_grid(worldSize), h_next(worldSize)
 {
-    blocks = (worldSize + BLOCK_SIZE_X - 1) / BLOCK_SIZE_X;
+    blocks = (worldSize + (BLOCK_SIZE_X * BLOCK_SIZE_Y) - 1) / (BLOCK_SIZE_X * BLOCK_SIZE_Y);
     allocDevice();
 }
 
@@ -88,14 +93,15 @@ void GameOfLifeCUDA::step() {
 #ifdef ARRAY_2D
     dim3 threads(BLOCK_SIZE_X, BLOCK_SIZE_Y);
     dim3 blocks((cols + BLOCK_SIZE_X - 1) / BLOCK_SIZE_X, (rows + BLOCK_SIZE_Y - 1) / BLOCK_SIZE_Y);
-    life_step_kernel<<<blocks, threads>>>(d_grid, d_next, cols, rows);
+    life_step_kernel2d<<<blocks, threads>>>(d_grid, d_next, cols, rows);
 #else
-    life_step_kernel<<<blocks, threadsPerBlock>>>(d_grid, d_next, cols, rows);
+    size_t blockSize = BLOCK_SIZE_X * BLOCK_SIZE_Y;
+    life_step_kernel1d<<<blocks, blockSize>>>(d_grid, d_next, cols, rows);
 #endif
     checkCuda(cudaGetLastError(), "launch kernel");
     checkCuda(cudaDeviceSynchronize(), "sync");
 
-#ifdef USE_2D_PTRS
+#ifdef ARRAY_2D
     std::swap(d_grid_rows, d_next_rows);
     checkCuda(cudaMemcpy(d_grid, d_grid_rows.data(), rows * sizeof(ubyte*), cudaMemcpyHostToDevice), "swap grid**");
     checkCuda(cudaMemcpy(d_next, d_next_rows.data(), rows * sizeof(ubyte*), cudaMemcpyHostToDevice), "swap next**");

@@ -34,8 +34,7 @@ endif()
 
 if (USE_CUDA)
   enable_language(CUDA)
-  add_library(cuda_life STATIC game_of_life_cuda.cu)
-  #add_executable(cuda_life game_of_life_cuda.cu)
+  add_library(cuda_life STATIC game_of_life_cuda.cu cuda_kernel_1d.cu cuda_kernel_2d.cu)
   target_include_directories(cuda_life PRIVATE "${PROJECT_SOURCE_DIR}/include")
 
   add_executable(CudaBenckmark cuda_benchmark.cpp)
