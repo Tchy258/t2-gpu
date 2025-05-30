@@ -54,6 +54,20 @@
             }
         },
         {
+            "name": "opencl2d",
+            "displayName": "MinGW OpenCL",
+            "description": "Build with USE_OPENCL=ON",
+            "generator": "MinGW Makefiles",
+            "binaryDir": "${sourceDir}/build/opencl2d",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Debug",
+                "CMAKE_C_COMPILER": "C:/msys64/ucrt64/bin/gcc.exe",
+                "CMAKE_CXX_COMPILER": "C:/msys64/ucrt64/bin/g++.exe",
+                "USE_OPENCL": true,
+                "USE_ARRAY_2D": true
+            }
+        },
+        {
             "name": "cuda",
             "displayName": "VS2022 + CUDA (default toolset)",
             "generator": "Visual Studio 17 2022",
@@ -64,6 +78,20 @@
                 "CMAKE_C_COMPILER": "cl.exe",
                 "CMAKE_CXX_COMPILER": "cl.exe",
                 "USE_CUDA": "ON"
+            }
+        },
+        {
+            "name": "cuda2d",
+            "displayName": "VS2022 + CUDA (default toolset)",
+            "generator": "Visual Studio 17 2022",
+            "binaryDir": "${sourceDir}/build/cuda2d",
+            "toolset": "host=x64",
+            "architecture": "x64",
+            "cacheVariables": {
+                "CMAKE_C_COMPILER": "cl.exe",
+                "CMAKE_CXX_COMPILER": "cl.exe",
+                "USE_CUDA": "ON",
+                "USE_ARRAY_2D": true
             }
         }
     ],
