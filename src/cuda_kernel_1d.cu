@@ -2,7 +2,7 @@
 using ubyte = unsigned char;
 
 extern "C"  
-__global__ void life_step_kernel(const ubyte* grid, ubyte* next,
+__global__ void life_step_kernel1d(const ubyte* grid, ubyte* next,
                                  int width, int height)
 {
     int idx = blockIdx.x * blockDim.x + threadIdx.x;

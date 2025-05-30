@@ -100,7 +100,7 @@ void GameOfLifeOpenCL::step() {
     cl::NDRange global(global_x, global_y);
     cl::NDRange local(BLOCK_SIZE_X, BLOCK_SIZE_Y);
     #else
-    cl::NDRange local(BLOCK_SIZE_X);
+    cl::NDRange local(BLOCK_SIZE_X * BLOCK_SIZE_Y);
     cl::NDRange global(worldSize);
     #endif
     queue_cpp.enqueueNDRangeKernel(lifeKernel, cl::NullRange, global, local);
