@@ -1,5 +1,9 @@
 add_library(Benchmark STATIC benchmark.cpp)
 target_include_directories(Benchmark PRIVATE "${PROJECT_SOURCE_DIR}/include")
+if(USE_ARRAY_2D)
+add_compile_definitions(ARRAY_2D)
+endif()
+
 if (USE_OPENCL)
   add_library(ProjectHeaders INTERFACE)
   target_include_directories(ProjectHeaders INTERFACE "${PROJECT_SOURCE_DIR}/include")

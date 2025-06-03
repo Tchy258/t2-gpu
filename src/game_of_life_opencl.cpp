@@ -3,8 +3,6 @@
 #include <random>
 #include <stdexcept>
 
-// constantes del juego
-#include "constants.h"  // define GRID_ROWS, GRID_COLS
 
 using ubyte = unsigned char;
 
