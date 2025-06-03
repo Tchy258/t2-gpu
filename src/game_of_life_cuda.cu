@@ -20,7 +20,12 @@ GameOfLifeCUDA::GameOfLifeCUDA()
       bytes(worldSize * sizeof(ubyte)),
       h_grid(worldSize), h_next(worldSize)
 {
-    blocks = (worldSize + (BLOCK_SIZE_X * BLOCK_SIZE_Y) - 1) / (BLOCK_SIZE_X * BLOCK_SIZE_Y);
+    #ifdef ARRAY_2D
+    blocksX = (cols + BLOCK_SIZE_X - 1) / BLOCK_SIZE_X;
+    blocksY = (rows + BLOCK_SIZE_Y - 1) / BLOCK_SIZE_Y;
+    #else
+    blocks = (worldSize + blockSize - 1) / blockSize;
+    #endif
     allocDevice();
 }
 
@@ -92,10 +97,9 @@ void GameOfLifeCUDA::uploadGrid() {
 void GameOfLifeCUDA::step() {
 #ifdef ARRAY_2D
     dim3 threads(BLOCK_SIZE_X, BLOCK_SIZE_Y);
-    dim3 blocks((cols + BLOCK_SIZE_X - 1) / BLOCK_SIZE_X, (rows + BLOCK_SIZE_Y - 1) / BLOCK_SIZE_Y);
+    dim3 blocks(blocksX, blocksY);
     life_step_kernel2d<<<blocks, threads>>>(d_grid, d_next, cols, rows);
 #else
-    size_t blockSize = BLOCK_SIZE_X * BLOCK_SIZE_Y;
     life_step_kernel1d<<<blocks, blockSize>>>(d_grid, d_next, cols, rows);
 #endif
     checkCuda(cudaGetLastError(), "launch kernel");

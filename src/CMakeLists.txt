@@ -32,6 +32,7 @@ if (USE_CUDA)
   enable_language(CUDA)
   add_library(cuda_life STATIC game_of_life_cuda.cu cuda_kernel_1d.cu cuda_kernel_2d.cu)
   target_include_directories(cuda_life PRIVATE "${PROJECT_SOURCE_DIR}/include")
+  set_target_properties(cuda_life PROPERTIES CUDA_ARCHITECTURES "native")
 
   add_executable(CudaBenckmark cuda_benchmark.cpp)
   target_include_directories(CudaBenckmark PRIVATE "${PROJECT_SOURCE_DIR}/include")
@@ -53,15 +54,16 @@ if (USE_CPU)
     target_include_directories(GameOfLifeCPUSerial PRIVATE "${PROJECT_SOURCE_DIR}/include")
     target_link_libraries(GameOfLifeCPUSerial CPUSerialImpl)
 
+    add_executable(CPUSerialBenchmark cpu_serial_benchmark.cpp)
+    target_include_directories(CPUSerialBenchmark PRIVATE "${PROJECT_SOURCE_DIR}/include")
+    target_link_libraries(CPUSerialBenchmark CPUSerialImpl Benchmark)
+    
     add_library(CPUParallelImpl STATIC game_of_life_parallel.cpp)
     target_include_directories(CPUParallelImpl PRIVATE "${PROJECT_SOURCE_DIR}/include")
     add_executable(GameOfLifeCPUParallel cpu_parallel_example.cpp)
     target_include_directories(GameOfLifeCPUParallel PRIVATE "${PROJECT_SOURCE_DIR}/include")
     target_link_libraries(GameOfLifeCPUParallel CPUParallelImpl)
 
-    add_executable(CPUSerialBenchmark cpu_serial_benchmark.cpp)
-    target_include_directories(CPUSerialBenchmark PRIVATE "${PROJECT_SOURCE_DIR}/include")
-    target_link_libraries(CPUSerialBenchmark CPUSerialImpl Benchmark)
 
     add_executable(CPUParallelBenchmark cpu_parallel_benchmark.cpp)
     target_include_directories(CPUParallelBenchmark PRIVATE "${PROJECT_SOURCE_DIR}/include")

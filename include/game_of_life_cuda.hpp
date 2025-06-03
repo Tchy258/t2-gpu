@@ -32,7 +32,6 @@ private:
     unsigned long long rows, cols;
     size_t worldSize;
     size_t bytes;
-    unsigned long long blocks;
 
     std::vector<ubyte> h_grid;
     std::vector<ubyte> h_next;
@@ -42,7 +41,11 @@ private:
     ubyte** d_next = nullptr;
     std::vector<ubyte*> d_grid_rows;
     std::vector<ubyte*> d_next_rows;
+    unsigned long long blocksX;
+    unsigned long long blocksY;
 #else
+    unsigned long long blocks;
+    unsigned long long blockSize = BLOCK_SIZE_X * BLOCK_SIZE_Y;
     ubyte* d_grid = nullptr;
     ubyte* d_next = nullptr;
 #endif

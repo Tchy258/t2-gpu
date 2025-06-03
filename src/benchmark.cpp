@@ -1,15 +1,20 @@
 #include "benchmark.h"
 
 void benchmark(GameOfLife* game, int iterations, const std::string& fileName) {
+    #ifdef ARRAY_2D
+    std::cout << "2D" << std::endl;
+    #else
+    std::cout << "1D" << std::endl;
+    #endif
     std::ofstream file;
     if (!fileName.empty()) {
         file = std::ofstream(fileName);
         file << "iterationNumber,iterationDuration(s),cellsPerSecond" << std::endl;
     }
+    auto start = std::chrono::high_resolution_clock::now();
     game->initializeRandom();
     int totalIterations = iterations;
     unsigned long long totalCellsEvaluated = GRID_COLS * GRID_ROWS * totalIterations;
-    auto start = std::chrono::high_resolution_clock::now();
     std::chrono::duration<double, std::milli> iterationTotal{0};
 
     while (iterations-- > 0) {
