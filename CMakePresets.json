@@ -1302,20 +1302,6 @@
                 "BLOCK_SIZE_Y": "5",
                 "USE_CUDA": true
             }
-        },
-        {
-            "name": "cuda2d",
-            "displayName": "VS2022 + CUDA (default toolset)",
-            "generator": "Visual Studio 17 2022",
-            "binaryDir": "${sourceDir}/build/cuda2d",
-            "toolset": "host=x64",
-            "architecture": "x64",
-            "cacheVariables": {
-                "CMAKE_C_COMPILER": "cl.exe",
-                "CMAKE_CXX_COMPILER": "cl.exe",
-                "USE_CUDA": "ON",
-                "USE_ARRAY_2D": true
-            }
         }
     ],
     "buildPresets": [
