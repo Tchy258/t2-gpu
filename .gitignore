@@ -76,3 +76,4 @@ Thumbs.db
 *.log
 *.db
 *.d
+env/
