@@ -112,4 +112,5 @@ void GameOfLifeCUDA::step() {
 #else
     std::swap(d_grid, d_next);
 #endif
+    uploadGrid();
 }
