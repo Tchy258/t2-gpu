@@ -27,13 +27,14 @@ void benchmark(GameOfLife* game, int iterations, const std::string& fileName) {
         auto copyEnd = std::chrono::high_resolution_clock::now();
         std::chrono::duration<double, std::milli> copyDuration = copyEnd - copyStart;
         copyTimeTotal += copyDuration;
+        iterationTotal += iterationDuration;
         if (!fileName.empty() && file.is_open()) {
             file << totalIterations - iterations << "," 
             << iterationDuration.count() / 1000.0 << ","
             << copyDuration.count() << ","
-            << (iterationDuration - copyDuration).count() / 1000.0 << ","
+            << (iterationDuration.count() - copyDuration.count()) / 1000.0 << ","
             << (GRID_COLS * GRID_ROWS) / (iterationDuration.count() / 1000.0) << ","
-            << (GRID_COLS * GRID_ROWS) / ((iterationDuration - copyDuration).count() / 1000.0) << std::endl;
+            << (GRID_COLS * GRID_ROWS) / ((iterationDuration.count() - copyDuration.count()) / 1000.0) << std::endl;
         }
     }
 
