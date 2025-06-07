@@ -41,10 +41,10 @@ void benchmark(GameOfLife* game, int iterations, const std::string& fileName) {
     auto end = std::chrono::high_resolution_clock::now();
     std::chrono::duration<double, std::milli> duration = end - start;
 
-    double seconds = iterationTotal.count() / 1000.0;
-    double secondsCopy = copyTimeTotal.count() / 1000.0;
+    double seconds = (iterationTotal.count() + copyTimeTotal.count()) / 1000.0;
+    double secondsNoCopy = iterationTotal.count() / 1000.0;
     double cellsPerSecond = totalCellsEvaluated / seconds;
-    double cellsNoCopy = totalCellsEvaluated / secondsCopy;
+    double cellsNoCopy = totalCellsEvaluated / secondsNoCopy;
 
     std::cout << "Total elapsed time: " << duration.count() << " ms\n";
     std::cout << "Time in step(): " << iterationTotal.count() << " ms\n";
