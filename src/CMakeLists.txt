@@ -48,27 +48,28 @@ if (USE_CUDA)
 endif()
 
 if (USE_CPU)
-
+  if (USE_PARALLEL)
+  add_library(CPUParallelImpl STATIC game_of_life_parallel.cpp)
+  target_include_directories(CPUParallelImpl PRIVATE "${PROJECT_SOURCE_DIR}/include")
+  #add_executable(GameOfLifeCPUParallel cpu_parallel_example.cpp)
+  #target_include_directories(GameOfLifeCPUParallel PRIVATE "${PROJECT_SOURCE_DIR}/include")
+  #target_link_libraries(GameOfLifeCPUParallel CPUParallelImpl)
+  
+  add_executable(CPUParallelBenchmark cpu_parallel_benchmark.cpp)
+  target_include_directories(CPUParallelBenchmark PRIVATE "${PROJECT_SOURCE_DIR}/include")
+  target_link_libraries(CPUParallelBenchmark CPUParallelImpl Benchmark)
+  else()
     add_library(CPUSerialImpl STATIC game_of_life_serial.cpp)
     target_include_directories(CPUSerialImpl PRIVATE "${PROJECT_SOURCE_DIR}/include")
-    add_executable(GameOfLifeCPUSerial cpu_serial_example.cpp)
-    target_include_directories(GameOfLifeCPUSerial PRIVATE "${PROJECT_SOURCE_DIR}/include")
-    target_link_libraries(GameOfLifeCPUSerial CPUSerialImpl)
-
+    #add_executable(GameOfLifeCPUSerial cpu_serial_example.cpp)
+    #target_include_directories(GameOfLifeCPUSerial PRIVATE "${PROJECT_SOURCE_DIR}/include")
+    #target_link_libraries(GameOfLifeCPUSerial CPUSerialImpl)
+    
     add_executable(CPUSerialBenchmark cpu_serial_benchmark.cpp)
     target_include_directories(CPUSerialBenchmark PRIVATE "${PROJECT_SOURCE_DIR}/include")
     target_link_libraries(CPUSerialBenchmark CPUSerialImpl Benchmark)
+  endif()
     
-    add_library(CPUParallelImpl STATIC game_of_life_parallel.cpp)
-    target_include_directories(CPUParallelImpl PRIVATE "${PROJECT_SOURCE_DIR}/include")
-    add_executable(GameOfLifeCPUParallel cpu_parallel_example.cpp)
-    target_include_directories(GameOfLifeCPUParallel PRIVATE "${PROJECT_SOURCE_DIR}/include")
-    target_link_libraries(GameOfLifeCPUParallel CPUParallelImpl)
-
-
-    add_executable(CPUParallelBenchmark cpu_parallel_benchmark.cpp)
-    target_include_directories(CPUParallelBenchmark PRIVATE "${PROJECT_SOURCE_DIR}/include")
-    target_link_libraries(CPUParallelBenchmark CPUParallelImpl Benchmark)
 
 endif()
 
