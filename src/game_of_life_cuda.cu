@@ -70,7 +70,6 @@ void GameOfLifeCUDA::freeDevice() {
 
 void GameOfLifeCUDA::initialize() {
     std::fill(h_grid.begin(), h_grid.end(), 0);
-    std::fill(h_next.begin(), h_next.end(), 0);
     uploadGrid();
 }
 
@@ -97,12 +96,10 @@ void GameOfLifeCUDA::uploadGrid() {
 void GameOfLifeCUDA::copyGridToHost() {
 #ifdef ARRAY_2D
     for (int y = 0; y < rows; ++y) {
-        checkCuda(cudaMemcpy(&h_grid[y * cols], d_grid_rows[y], cols, cudaMemcpyDeviceToHost), "copy row grid");
-        checkCuda(cudaMemcpy(&h_grid[y * cols], d_next_rows[y], cols, cudaMemcpyDeviceToHost), "copy row next");
+        checkCuda(cudaMemcpy(&h_next[y * cols], d_grid_rows[y], cols, cudaMemcpyDeviceToHost), "copy row grid");
     }
 #else
-    checkCuda(cudaMemcpy(h_grid.data(), d_grid, bytes, cudaMemcpyDeviceToHost), "copy grid");
-    checkCuda(cudaMemcpy(h_grid.data(), d_next, bytes, cudaMemcpyDeviceToHost), "copy next");
+    checkCuda(cudaMemcpy(h_next.data(), d_grid, bytes, cudaMemcpyDeviceToHost), "copy grid");
 #endif
 }
 

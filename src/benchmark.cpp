@@ -30,11 +30,11 @@ void benchmark(GameOfLife* game, int iterations, const std::string& fileName) {
         iterationTotal += iterationDuration;
         if (!fileName.empty() && file.is_open()) {
             file << totalIterations - iterations << "," 
-            << iterationDuration.count() / 1000.0 << ","
+            << (iterationDuration.count() + copyDuration.count()) / 1000.0 << ","
             << copyDuration.count() << ","
-            << (iterationDuration.count() - copyDuration.count()) / 1000.0 << ","
-            << (GRID_COLS * GRID_ROWS) / (iterationDuration.count() / 1000.0) << ","
-            << (GRID_COLS * GRID_ROWS) / ((iterationDuration.count() - copyDuration.count()) / 1000.0) << std::endl;
+            << iterationDuration.count() / 1000.0 << ","
+            << (GRID_COLS * GRID_ROWS) / ((iterationDuration.count() + copyDuration.count()) / 1000.0) << "," 
+            << (GRID_COLS * GRID_ROWS) / (iterationDuration.count() / 1000.0) << std::endl;
         }
     }
 
