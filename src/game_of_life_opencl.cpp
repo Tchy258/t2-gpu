@@ -75,16 +75,26 @@ void GameOfLifeOpenCL::initializeRandom() {
         grid.host[i] = (ubyte)d(gen);
         nextGrid.host[i] = grid.host[i];
     }
+    uploadGrid();
 }
 
-
-void GameOfLifeOpenCL::step() {
+void GameOfLifeOpenCL::uploadGrid() {
     size_t bytes = worldSize * sizeof(ubyte);
 
     // 1) subir grid.host -> grid.dev
     queue_cpp.enqueueWriteBuffer(grid.dev, CL_FALSE, 0, bytes, grid.host.data());
+}
 
-    // 2) preparar kernel
+void GameOfLifeOpenCL::copyGridToHost() {
+    size_t bytes = worldSize * sizeof(ubyte);
+
+    queue_cpp.enqueueReadBuffer(grid.dev, CL_TRUE, 0, bytes, nextGrid.host.data());
+
+    std::swap(grid.host, nextGrid.host);
+}
+
+void GameOfLifeOpenCL::step() {
+
     unsigned arg = 0;
     lifeKernel.setArg(arg++, grid.dev);
     lifeKernel.setArg(arg++, nextGrid.dev);
@@ -104,11 +114,6 @@ void GameOfLifeOpenCL::step() {
     queue_cpp.enqueueNDRangeKernel(lifeKernel, cl::NullRange, global, local);
     queue_cpp.finish();
 
-    // 4) leer nextGrid.dev -> nextGrid.host
-    queue_cpp.enqueueReadBuffer(nextGrid.dev, CL_TRUE, 0, bytes, nextGrid.host.data());
-
-    // 5) swap buffers en host y device
-    std::swap(grid.host, nextGrid.host);
     std::swap(grid.dev,  nextGrid.dev);
 }
 

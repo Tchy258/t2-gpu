@@ -15,7 +15,7 @@ public:
                                              unsigned int y0, unsigned int y1, unsigned int y2) = 0;
     virtual void step() = 0;
     virtual ARRAY_TYPE(unsigned char,) getGrid() const = 0;
-
+    virtual void copyGridToHost() {};
 };
 
 #endif

@@ -94,6 +94,18 @@ void GameOfLifeCUDA::uploadGrid() {
 #endif
 }
 
+void GameOfLifeCUDA::copyGridToHost() {
+#ifdef ARRAY_2D
+    for (int y = 0; y < rows; ++y) {
+        checkCuda(cudaMemcpy(&h_grid[y * cols], d_grid_rows[y], cols, cudaMemcpyDeviceToHost), "copy row grid");
+        checkCuda(cudaMemcpy(&h_grid[y * cols], d_next_rows[y], cols, cudaMemcpyDeviceToHost), "copy row next");
+    }
+#else
+    checkCuda(cudaMemcpy(h_grid.data(), d_grid, bytes, cudaMemcpyDeviceToHost), "copy grid");
+    checkCuda(cudaMemcpy(h_grid.data(), d_next, bytes, cudaMemcpyDeviceToHost), "copy next");
+#endif
+}
+
 void GameOfLifeCUDA::step() {
 #ifdef ARRAY_2D
     dim3 threads(BLOCK_SIZE_X, BLOCK_SIZE_Y);
@@ -112,5 +124,4 @@ void GameOfLifeCUDA::step() {
 #else
     std::swap(d_grid, d_next);
 #endif
-    uploadGrid();
 }

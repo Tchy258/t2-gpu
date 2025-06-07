@@ -27,16 +27,16 @@ public:
                                             throw std::logic_error("Counting should be done in kernel");
                                         };
     ARRAY_TYPE(unsigned char,) getGrid() const override;
-
+    void copyGridToHost() override;
 private:
     static void initializeOpenCL();
-
     static bool clInitialized;
     static cl::Context      context_cpp;
     static cl::CommandQueue queue_cpp;
     static cl::Program      program;
     static cl::Kernel       lifeKernel;
 
+    void uploadGrid();
     CLBuffer grid, nextGrid;
     size_t   worldSize;
     #ifdef ARRAY_2D

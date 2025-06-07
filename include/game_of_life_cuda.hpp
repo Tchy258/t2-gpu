@@ -23,6 +23,7 @@ public:
     ARRAY_TYPE(unsigned char,) getGrid() const override {
         throw std::logic_error("Not implemented for CUDA");
     }
+    void copyGridToHost() override;
 
 private:
     void allocDevice();

@@ -1,7 +1,5 @@
-
 using ubyte = unsigned char;
 
-extern "C"  
 __global__ void life_step_kernel1d(const ubyte* grid, ubyte* next,
                                  int width, int height)
 {
