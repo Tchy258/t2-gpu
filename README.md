@@ -1,7 +1,7 @@
 # Tarea 2 - OpenCL y CUDA
 
 Este código corresponde a la Tarea 2 - OpenCL y CUDA de Nicolás Escobar y Vicente Muñoz, alumnos del curso CC7515 Computación en GPU del semestre otoño de 2025. Esta tarea trata sobre implementar El Juego de la Vida de Conway, tanto en CPU como en GPU haciendo uso de CUDA y OpenCL en C++, para luego comparar su desempeño en los distintos entornos y además elegir 2 variaciones que impactan su rendimiento y medir su desempeño. Las variaciones escogidas fueron:
-1. Usar tamaños de bloque tanto múltiplos de 32 como no múltiplos de 32
+1. Usar tamaños de bloque tanto múltiplos de 32 como no múltiplos de 32. En particular se usan tamaños de bloque 30, 32 y 35.
 2. Usar arreglos de dos dimensiones en vez de un mapeo a arreglo de una dimensión.
 
 ## Herramientas necesarias
@@ -70,6 +70,18 @@ Para ello se deben configurar las siguientes variables de entorno:
 + CXX: Ruta al compilador de lenguaje C++, por defecto con una instalación estándar de MSYS2 es `C:\msys64\ucrt64\bin\g++.exe`, en linux `/usr/bin/g++`.
 + CMAKE_GENERATOR: `"MinGW Makefiles"` o `"Unix Makefiles"` según corresponda.
 
+En el caso de CUDA en Windows, es necesario utilizar el generador y compilador de Visual Studio, por lo que estas variables de entorno debiesen tener los siguientes valores:
++ CC: Ruta del ejecutable `cl.exe`, si está instalado Visual Studio, `cl.exe` debiese ser parte de la variable de entorno `PATH`, por lo que basta con solo colcar `cl.exe`
++ CXX: Lo mismo que arriba.
++ CMAKE_GENERATOR: `"Visual Studio 17 2022"`.
+
+Hay otras variables de entorno necesarias que se definen dentro de la terminal de Visual Studio, principalmente:
++ CudaToolkitDir: Path a la instalación de los binarios de CUDA, por defecto en Windows debiese ser `C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\vX.Y` donde `X.Y` es la versión de CUDA a utilizar, en las pruebas se utilizó CUDA v12.9
++ CUDA_PATH: Mismo que arriba
++ CUDA_PATH_X_Y: Mismo que arriba con X_Y la version de CUDA, en el caso de las pruebas 12_9.
+
+Ninguno de los 2 autores de esta tarea utiliza un computador que no sea Windows, pero en Linux, CUDA necesita utilizar el compilador `nvcc` y el generador debisese simplemente ser `Unix Makefiles`.
+
 Para dejar estas variables configuradas durante la sesión actual de terminal se debe ingresar lo siguiente en su terminal de preferencia.
 
 ### cmd
@@ -105,6 +117,8 @@ Además dependiendo de que implementación se desea compilar, es necesario confi
 ```
 La primera permitirá compilar la implementación en CPU del juego de la vida, la segunda la implementación en GPU con CUDA y la tercera, con OpenCL.
 
+Adicionalmente existe otra variable que se le puede entregar a CMake junto con `-DUSE_CPU` que es `-DUSE_PARALLEL` para compilar una versión paralela en CPU del juego de la vida.
+
 Notar que OpenCL está incluído como submodulos de este repositorio, por lo que, para compilar con OpenCL es necesario clonar el repositorio con
 ```
 git clone --recursive https://github.com/Tchy258/t2-gpu.git
@@ -117,29 +131,41 @@ Estos valores se pueden editar de 2 formas, ya sea definiendolos como variables 
 # Compilación
 Habiendo hecho la configuración basta con ejecutar los siguientes comandos en una terminal estando en la carpeta raíz del projecto:
 ```bash
-$ cmake -DUSE_target=true -S . -B build/release/target
-$ cmake --build build/release/target
+$ cmake -DUSE_TARGET=true -S . -B build/target
+$ cmake --build build/target
 ```
-Donde `target` debe ser reemplazado por `CPU`, `CUDA` u `OPENCL` según corresponda.
+Donde `TARGET` debe ser reemplazado por `CPU`, `CUDA` u `OPENCL`, (equivalentemente en minúscula para `target`) según corresponda.
 
-Esto generará los ejecutables correspondientes según la variante deseada en la carpeta `build/release/target`.
+Esto generará los ejecutables correspondientes según la variante deseada en la carpeta `build/target`.
 
 Alternativamente si se usa VSCode, están disponibles varios presets en [CMakePresets.json](CMakePresets.json) para cada objetivo.
 
 # Ejecución
 
-Para ejecutar el juego se dispone de ejemplos pequeños, los cuales se asume serán compilados con tamaños de grilla reducidos (como 10 x 10), estos se encuentran en [cpu_serial_example.cpp](src/cpu_serial_example.cpp), [cpu_parallel_example.cpp](src/cpu_parallel_example.cpp), *insertar ejemplos de cuda/opencl aquí*, los cuales reciben como argumento la cantidad de iteraciones que se desea realizar, a modo de ejemplo, la implementación en CPU de manera serial se puede ver ejecutando el archivo `build/release/CPU/CPUSerialExample` (con la extensión que corresponda) y la cantidad de iteraciones de la manera siguiente:
+Para ejecutar el juego se dispone de ejemplos pequeños, los cuales se asume serán compilados con tamaños de grilla reducidos (como 10 x 10), estos se encuentran en [cpu_serial_example.cpp](src/cpu_serial_example.cpp), [cpu_parallel_example.cpp](src/cpu_parallel_example.cpp), los cuales reciben como argumento la cantidad de iteraciones que se desea realizar, a modo de ejemplo, la implementación en CPU de manera serial se puede ver ejecutando el archivo `build/cpu/CPU/CPUSerialExample` (con la extensión que corresponda) y la cantidad de iteraciones de la manera siguiente:
 ```bash
 $ ./CPUSerialExample k
 ```
 Donde `k` es el número de iteraciones.
 
-Todos los otros ejecutables se prueban de manera similar.
+Los otros ejecutables de ejemplo se prueban de manera similar. Notar que por defecto estos vienen comentados en el [CMakeLists.txt de src](src/CMakeLists.txt)
 
 Las pruebas fueron realizadas con el código disponible en el archivo [benchmark.cpp](src/benchmark.cpp).
 
-Estos ejecutables para las pruebas, como el que se compilará para `build/release/CPU/CPUSerialBenchmark` también aceptan un tercer parámetro con un nombre de archivo al cual escribirán las estadísticas resultantes de correr el programa en formato CSV. Un ejemplo de esto sería
+Estos ejecutables para las pruebas, como el que se compilará para `build/cpu/CPUSerialBenchmark` también aceptan un tercer parámetro con un nombre de archivo al cual escribirán las estadísticas resultantes de correr el programa en formato CSV. Un ejemplo de esto sería
 ```bash
 $ ./CPUSerialBenchmark 16 serial.csv
 ```
-Aquí los resultados se guardarán en la carpeta `build/release/CPU/` en el archivo `serial.csv` para 16 iteraciones.
+Aquí los resultados se guardarán en la carpeta actual (desde donde se ejecute el binario) en el archivo `serial.csv` para 16 iteraciones. Para guardarlo en otra carpeta se debe ingresar una ruta absoluta o relativa.
+
+Para facilitar la tarea de compilación y ejecución de todas las pruebas, se dispone del archivo [run_presets.py](run_presets.py) que compila y ejecuta uno por uno todos los presets contenidos en [CMakePresets.json](CMakePresets.json), este incluye presets base para CPU, CUDA y OpenCL junto con una gran cantidad de variaciones según tamaño de grilla y de bloque. Para evitar factores externos, tales como archivos cacheados, este script siempre recompila antes de ejecutar algún preset. Para ejecutarlo, solo se necesita Python3 sin ningún paquete adicional y el siguiente comando:
+```bash
+$ python3 ./run_presets.py
+```
+
+## Análisis
+
+El procesado de los datos generados se hace mediante el jupyter notebook disponible en [analysis.ipynb](analysis.ipynb), este notebook necesita correr en un entorno de python que tenga los paquetes contenidos en [requirements.txt](requirements.txt), teniendo un entorno virtual (o conda) activado, se pueden instalar estas dependencias mediante el comando
+```bash
+$ pip install -r requirements.txt
+```
