@@ -28,8 +28,64 @@ def make_preset_name(tag, r, c, bx, by, is_2d, bad):
         parts.append("unaligned")
     return "-".join(parts)
 
-presets = []
-
+# Editar Paths aquí si es necesario
+presets = [
+    {
+            "name": "cpu",
+            "displayName": "GCC Release",
+            "description": "Using compilers: C = C:\\msys64\\ucrt64\\bin\\gcc.exe, CXX = C:\\msys64\\ucrt64\\bin\\g++.exe",
+            "generator": "MinGW Makefiles",
+            "binaryDir": "${sourceDir}/build/${presetName}",
+            "cacheVariables": {
+                "GRID_ROWS": "128",
+                "GRID_COLS": "64",
+                "BLOCK_SIZE_X": "32",
+                "BLOCK_SIZE_Y": "32",
+                "ARRAY_2D": False,
+                "USE_CPU": True,
+                "USE_PARALLEL": False,
+                "CMAKE_INSTALL_PREFIX": "${sourceDir}/out/install/${presetName}",
+                "CMAKE_C_COMPILER": "C:/msys64/ucrt64/bin/gcc.exe",
+                "CMAKE_CXX_COMPILER": "C:/msys64/ucrt64/bin/g++.exe"
+            }
+        },
+        {
+            "name": "opencl",
+            "displayName": "MinGW OpenCL",
+            "description": "Build with USE_OPENCL=ON",
+            "generator": "MinGW Makefiles",
+            "binaryDir": "${sourceDir}/build/${presetName}",
+            "cacheVariables": {
+                "GRID_ROWS": "128",
+                "GRID_COLS": "64",
+                "BLOCK_SIZE_X": "32",
+                "BLOCK_SIZE_Y": "32",
+                "ARRAY_2D": False,
+                "CMAKE_C_COMPILER": "C:/msys64/ucrt64/bin/gcc.exe",
+                "CMAKE_CXX_COMPILER": "C:/msys64/ucrt64/bin/g++.exe",
+                "USE_OPENCL": True
+            }
+        },
+        {
+            "name": "cuda",
+            "displayName": "VS2022 + CUDA (default toolset)",
+            "generator": "Visual Studio 17 2022",
+            "binaryDir": "${sourceDir}/build/${presetName}",
+            "toolset": "host=x64",
+            "architecture": "x64",
+            "cacheVariables": {
+                "GRID_ROWS": "128",
+                "GRID_COLS": "64",
+                "BLOCK_SIZE_X": "32",
+                "BLOCK_SIZE_Y": "32",
+                "ARRAY_2D": False,
+                "CMAKE_C_COMPILER": "cl.exe",
+                "CMAKE_CXX_COMPILER": "cl.exe",
+                "USE_CUDA": True
+            }
+        },
+]
+build_presets = []
 for (rows, cols) in grid_sizes:
     for is_2d in [True, False]:
         for bad_block in [False, True]:
@@ -49,7 +105,7 @@ for (rows, cols) in grid_sizes:
                 preset = {
                     "name": make_preset_name(target, rows, cols, bx, by, is_2d, bad_block),
                     "displayName": f"{target} - {rows}x{cols} - Block {bx}x{by} - {'2D' if is_2d else '1D'}{' - Bad' if bad_block else ''}",
-                    "inherits": "release" if target.startswith("cpu") else target,
+                    "inherits": "cpu" if "cpu" in target else target,
                     "cacheVariables": {
                         "GRID_ROWS": str(rows),
                         "GRID_COLS": str(cols),
@@ -58,14 +114,21 @@ for (rows, cols) in grid_sizes:
                         **target_flags
                     }
                 }
+                build_preset = {
+                    "name": make_preset_name(target, rows, cols, bx, by, is_2d, bad_block),
+                    "displayName": f"{target} - {rows}x{cols} - Block {bx}x{by} - {'2D' if is_2d else '1D'}{' - Bad' if bad_block else ''}",
+                    "description": "",
+                    "configurePreset": make_preset_name(target, rows, cols, bx, by, is_2d, bad_block)
+                }
                 if is_2d:
                     preset["cacheVariables"]["ARRAY_2D"] = True
                 presets.append(preset)
-
+                build_presets.append(build_preset)
 # Final JSON structure
 cmake_presets = {
     "version": 8,
-    "configurePresets": presets
+    "configurePresets": presets,
+    "buildPresets": build_presets
 }
 
 # Save to file

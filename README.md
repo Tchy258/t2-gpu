@@ -163,6 +163,8 @@ Para facilitar la tarea de compilación y ejecución de todas las pruebas, se di
 $ python3 ./run_presets.py
 ```
 
+Si se desean generar presets con distintos tamaños de bloque o grilla, se dispone del archivo [generate_presets.py](generate_presets.py) que genera un CMakePresets.json
+
 ## Análisis
 
 El procesado de los datos generados se hace mediante el jupyter notebook disponible en [analysis.ipynb](analysis.ipynb), este notebook necesita correr en un entorno de python que tenga los paquetes contenidos en [requirements.txt](requirements.txt), teniendo un entorno virtual (o conda) activado, se pueden instalar estas dependencias mediante el comando
