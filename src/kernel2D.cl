@@ -1,5 +1,5 @@
 __constant sampler_t sampler = CLK_NORMALIZED_COORDS_FALSE | 
-                             CLK_ADDRESS_REPEAT | 
+                             CLK_ADDRESS_NONE | 
                              CLK_FILTER_NEAREST;
 
 __kernel void life(
@@ -29,7 +29,7 @@ __kernel void life(
                 for (int dx = -1; dx <= 1; dx++) {
                     if (dx == 0 && dy == 0) continue;
                     
-                    const int2 ncoord = (int2)(x + dx, y + dy);
+                    const int2 ncoord = (int2)((x + width + dx) % width, (y + dy + height) % height);
                     uint4 pixel = read_imageui(current, sampler, ncoord);
                     alive += pixel.x;
                 }
