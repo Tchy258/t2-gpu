@@ -55,6 +55,15 @@ GameOfLifeOpenCL::GameOfLifeOpenCL() {
 
     worldSize = size_t(GRID_ROWS) * GRID_COLS;
     size_t bytes = worldSize * sizeof(ubyte);
+    #ifdef ARRAY_2D
+        unsigned int finalSizeX = BLOCK_SIZE_X * TILE_WIDTH;
+        unsigned int finalSizeY = BLOCK_SIZE_Y * TILE_HEIGHT;
+        blocksX = ((GRID_COLS + finalSizeX - 1) / finalSizeX);
+        blocksY = ((GRID_ROWS + finalSizeY - 1) / finalSizeY);
+    #else
+        unsigned int finalSize = blockSize * CELLS_PER_THREAD;
+        blocks = (worldSize + finalSize - 1) / finalSize;
+    #endif
 
     // reserva host + device
     grid.host.assign(worldSize, 0);
@@ -95,19 +104,19 @@ void GameOfLifeOpenCL::copyGridToHost() {
 
 void GameOfLifeOpenCL::step() {
 
-    unsigned arg = 0;
+    unsigned int arg = 0;
     lifeKernel.setArg(arg++, grid.dev);
     lifeKernel.setArg(arg++, nextGrid.dev);
     lifeKernel.setArg(arg++, (cl_uint)GRID_COLS);
     lifeKernel.setArg(arg++, (cl_uint)GRID_ROWS);
-
     // 3) disparar kernel
     #ifdef ARRAY_2D
-    size_t global_x = ((GRID_COLS + BLOCK_SIZE_X - 1) / BLOCK_SIZE_X) * BLOCK_SIZE_X;
-    size_t global_y = ((GRID_ROWS + BLOCK_SIZE_Y - 1) / BLOCK_SIZE_Y) * BLOCK_SIZE_Y;
-    cl::NDRange global(global_x, global_y);
+    lifeKernel.setArg(arg++, TILE_WIDTH);
+    lifeKernel.setArg(arg++, TILE_HEIGHT);
+    cl::NDRange global(blocksX, blocksY);
     cl::NDRange local(BLOCK_SIZE_X, BLOCK_SIZE_Y);
     #else
+    lifeKernel.setArg(arg++, CELLS_PER_THREAD);
     cl::NDRange local(BLOCK_SIZE_X * BLOCK_SIZE_Y);
     cl::NDRange global(worldSize);
     #endif

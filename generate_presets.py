@@ -90,16 +90,10 @@ for (rows, cols) in grid_sizes:
     for is_2d in [True, False]:
         for bad_block in [False, True]:
             # Good block sizes
-            if is_2d:
-                if not bad_block:
-                    bx, by = 32, 32
-                else:
-                    bx, by = 30, 30
+            if not bad_block:
+                bx, by = 16, 16
             else:
-                if not bad_block:
-                    bx, by = 8, 4  # product = 32
-                else:
-                    bx, by = 7, 5  # product = 35
+                bx, by = 9, 9
 
             for target, target_flags in targets.items():
                 preset = {

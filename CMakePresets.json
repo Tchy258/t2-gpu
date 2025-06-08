@@ -56,1830 +56,1830 @@
             }
         },
         {
-            "name": "cpu-serial-grid128x64-block32x32-2d",
-            "displayName": "cpu-serial - 128x64 - Block 32x32 - 2D",
+            "name": "cpu-serial-grid128x64-block16x16-2d",
+            "displayName": "cpu-serial - 128x64 - Block 16x16 - 2D",
             "inherits": "cpu",
             "cacheVariables": {
                 "GRID_ROWS": "128",
                 "GRID_COLS": "64",
-                "BLOCK_SIZE_X": "32",
-                "BLOCK_SIZE_Y": "32",
+                "BLOCK_SIZE_X": "16",
+                "BLOCK_SIZE_Y": "16",
                 "USE_CPU": true,
                 "USE_PARALLEL": false,
                 "ARRAY_2D": true
             }
         },
         {
-            "name": "cpu-parallel-grid128x64-block32x32-2d",
-            "displayName": "cpu-parallel - 128x64 - Block 32x32 - 2D",
+            "name": "cpu-parallel-grid128x64-block16x16-2d",
+            "displayName": "cpu-parallel - 128x64 - Block 16x16 - 2D",
             "inherits": "cpu",
             "cacheVariables": {
                 "GRID_ROWS": "128",
                 "GRID_COLS": "64",
-                "BLOCK_SIZE_X": "32",
-                "BLOCK_SIZE_Y": "32",
+                "BLOCK_SIZE_X": "16",
+                "BLOCK_SIZE_Y": "16",
                 "USE_CPU": true,
                 "USE_PARALLEL": true,
                 "ARRAY_2D": true
             }
         },
         {
-            "name": "opencl-grid128x64-block32x32-2d",
-            "displayName": "opencl - 128x64 - Block 32x32 - 2D",
+            "name": "opencl-grid128x64-block16x16-2d",
+            "displayName": "opencl - 128x64 - Block 16x16 - 2D",
             "inherits": "opencl",
             "cacheVariables": {
                 "GRID_ROWS": "128",
                 "GRID_COLS": "64",
-                "BLOCK_SIZE_X": "32",
-                "BLOCK_SIZE_Y": "32",
+                "BLOCK_SIZE_X": "16",
+                "BLOCK_SIZE_Y": "16",
                 "USE_OPENCL": true,
                 "ARRAY_2D": true
             }
         },
         {
-            "name": "cuda-grid128x64-block32x32-2d",
-            "displayName": "cuda - 128x64 - Block 32x32 - 2D",
+            "name": "cuda-grid128x64-block16x16-2d",
+            "displayName": "cuda - 128x64 - Block 16x16 - 2D",
             "inherits": "cuda",
             "cacheVariables": {
                 "GRID_ROWS": "128",
                 "GRID_COLS": "64",
-                "BLOCK_SIZE_X": "32",
-                "BLOCK_SIZE_Y": "32",
+                "BLOCK_SIZE_X": "16",
+                "BLOCK_SIZE_Y": "16",
                 "USE_CUDA": true,
                 "ARRAY_2D": true
             }
         },
         {
-            "name": "cpu-serial-grid128x64-block30x30-2d-unaligned",
-            "displayName": "cpu-serial - 128x64 - Block 30x30 - 2D - Bad",
+            "name": "cpu-serial-grid128x64-block9x9-2d-unaligned",
+            "displayName": "cpu-serial - 128x64 - Block 9x9 - 2D - Bad",
             "inherits": "cpu",
             "cacheVariables": {
                 "GRID_ROWS": "128",
                 "GRID_COLS": "64",
-                "BLOCK_SIZE_X": "30",
-                "BLOCK_SIZE_Y": "30",
+                "BLOCK_SIZE_X": "9",
+                "BLOCK_SIZE_Y": "9",
                 "USE_CPU": true,
                 "USE_PARALLEL": false,
                 "ARRAY_2D": true
             }
         },
         {
-            "name": "cpu-parallel-grid128x64-block30x30-2d-unaligned",
-            "displayName": "cpu-parallel - 128x64 - Block 30x30 - 2D - Bad",
+            "name": "cpu-parallel-grid128x64-block9x9-2d-unaligned",
+            "displayName": "cpu-parallel - 128x64 - Block 9x9 - 2D - Bad",
             "inherits": "cpu",
             "cacheVariables": {
                 "GRID_ROWS": "128",
                 "GRID_COLS": "64",
-                "BLOCK_SIZE_X": "30",
-                "BLOCK_SIZE_Y": "30",
+                "BLOCK_SIZE_X": "9",
+                "BLOCK_SIZE_Y": "9",
                 "USE_CPU": true,
                 "USE_PARALLEL": true,
                 "ARRAY_2D": true
             }
         },
         {
-            "name": "opencl-grid128x64-block30x30-2d-unaligned",
-            "displayName": "opencl - 128x64 - Block 30x30 - 2D - Bad",
+            "name": "opencl-grid128x64-block9x9-2d-unaligned",
+            "displayName": "opencl - 128x64 - Block 9x9 - 2D - Bad",
             "inherits": "opencl",
             "cacheVariables": {
                 "GRID_ROWS": "128",
                 "GRID_COLS": "64",
-                "BLOCK_SIZE_X": "30",
-                "BLOCK_SIZE_Y": "30",
+                "BLOCK_SIZE_X": "9",
+                "BLOCK_SIZE_Y": "9",
                 "USE_OPENCL": true,
                 "ARRAY_2D": true
             }
         },
         {
-            "name": "cuda-grid128x64-block30x30-2d-unaligned",
-            "displayName": "cuda - 128x64 - Block 30x30 - 2D - Bad",
+            "name": "cuda-grid128x64-block9x9-2d-unaligned",
+            "displayName": "cuda - 128x64 - Block 9x9 - 2D - Bad",
             "inherits": "cuda",
             "cacheVariables": {
                 "GRID_ROWS": "128",
                 "GRID_COLS": "64",
-                "BLOCK_SIZE_X": "30",
-                "BLOCK_SIZE_Y": "30",
+                "BLOCK_SIZE_X": "9",
+                "BLOCK_SIZE_Y": "9",
                 "USE_CUDA": true,
                 "ARRAY_2D": true
             }
         },
         {
-            "name": "cpu-serial-grid128x64-block8x4-1d",
-            "displayName": "cpu-serial - 128x64 - Block 8x4 - 1D",
+            "name": "cpu-serial-grid128x64-block16x16-1d",
+            "displayName": "cpu-serial - 128x64 - Block 16x16 - 1D",
             "inherits": "cpu",
             "cacheVariables": {
                 "GRID_ROWS": "128",
                 "GRID_COLS": "64",
-                "BLOCK_SIZE_X": "8",
-                "BLOCK_SIZE_Y": "4",
+                "BLOCK_SIZE_X": "16",
+                "BLOCK_SIZE_Y": "16",
                 "USE_CPU": true,
                 "USE_PARALLEL": false
             }
         },
         {
-            "name": "cpu-parallel-grid128x64-block8x4-1d",
-            "displayName": "cpu-parallel - 128x64 - Block 8x4 - 1D",
+            "name": "cpu-parallel-grid128x64-block16x16-1d",
+            "displayName": "cpu-parallel - 128x64 - Block 16x16 - 1D",
             "inherits": "cpu",
             "cacheVariables": {
                 "GRID_ROWS": "128",
                 "GRID_COLS": "64",
-                "BLOCK_SIZE_X": "8",
-                "BLOCK_SIZE_Y": "4",
+                "BLOCK_SIZE_X": "16",
+                "BLOCK_SIZE_Y": "16",
                 "USE_CPU": true,
                 "USE_PARALLEL": true
             }
         },
         {
-            "name": "opencl-grid128x64-block8x4-1d",
-            "displayName": "opencl - 128x64 - Block 8x4 - 1D",
+            "name": "opencl-grid128x64-block16x16-1d",
+            "displayName": "opencl - 128x64 - Block 16x16 - 1D",
             "inherits": "opencl",
             "cacheVariables": {
                 "GRID_ROWS": "128",
                 "GRID_COLS": "64",
-                "BLOCK_SIZE_X": "8",
-                "BLOCK_SIZE_Y": "4",
+                "BLOCK_SIZE_X": "16",
+                "BLOCK_SIZE_Y": "16",
                 "USE_OPENCL": true
             }
         },
         {
-            "name": "cuda-grid128x64-block8x4-1d",
-            "displayName": "cuda - 128x64 - Block 8x4 - 1D",
+            "name": "cuda-grid128x64-block16x16-1d",
+            "displayName": "cuda - 128x64 - Block 16x16 - 1D",
             "inherits": "cuda",
             "cacheVariables": {
                 "GRID_ROWS": "128",
                 "GRID_COLS": "64",
-                "BLOCK_SIZE_X": "8",
-                "BLOCK_SIZE_Y": "4",
+                "BLOCK_SIZE_X": "16",
+                "BLOCK_SIZE_Y": "16",
                 "USE_CUDA": true
             }
         },
         {
-            "name": "cpu-serial-grid128x64-block7x5-1d-unaligned",
-            "displayName": "cpu-serial - 128x64 - Block 7x5 - 1D - Bad",
+            "name": "cpu-serial-grid128x64-block9x9-1d-unaligned",
+            "displayName": "cpu-serial - 128x64 - Block 9x9 - 1D - Bad",
             "inherits": "cpu",
             "cacheVariables": {
                 "GRID_ROWS": "128",
                 "GRID_COLS": "64",
-                "BLOCK_SIZE_X": "7",
-                "BLOCK_SIZE_Y": "5",
+                "BLOCK_SIZE_X": "9",
+                "BLOCK_SIZE_Y": "9",
                 "USE_CPU": true,
                 "USE_PARALLEL": false
             }
         },
         {
-            "name": "cpu-parallel-grid128x64-block7x5-1d-unaligned",
-            "displayName": "cpu-parallel - 128x64 - Block 7x5 - 1D - Bad",
+            "name": "cpu-parallel-grid128x64-block9x9-1d-unaligned",
+            "displayName": "cpu-parallel - 128x64 - Block 9x9 - 1D - Bad",
             "inherits": "cpu",
             "cacheVariables": {
                 "GRID_ROWS": "128",
                 "GRID_COLS": "64",
-                "BLOCK_SIZE_X": "7",
-                "BLOCK_SIZE_Y": "5",
+                "BLOCK_SIZE_X": "9",
+                "BLOCK_SIZE_Y": "9",
                 "USE_CPU": true,
                 "USE_PARALLEL": true
             }
         },
         {
-            "name": "opencl-grid128x64-block7x5-1d-unaligned",
-            "displayName": "opencl - 128x64 - Block 7x5 - 1D - Bad",
+            "name": "opencl-grid128x64-block9x9-1d-unaligned",
+            "displayName": "opencl - 128x64 - Block 9x9 - 1D - Bad",
             "inherits": "opencl",
             "cacheVariables": {
                 "GRID_ROWS": "128",
                 "GRID_COLS": "64",
-                "BLOCK_SIZE_X": "7",
-                "BLOCK_SIZE_Y": "5",
+                "BLOCK_SIZE_X": "9",
+                "BLOCK_SIZE_Y": "9",
                 "USE_OPENCL": true
             }
         },
         {
-            "name": "cuda-grid128x64-block7x5-1d-unaligned",
-            "displayName": "cuda - 128x64 - Block 7x5 - 1D - Bad",
+            "name": "cuda-grid128x64-block9x9-1d-unaligned",
+            "displayName": "cuda - 128x64 - Block 9x9 - 1D - Bad",
             "inherits": "cuda",
             "cacheVariables": {
                 "GRID_ROWS": "128",
                 "GRID_COLS": "64",
-                "BLOCK_SIZE_X": "7",
-                "BLOCK_SIZE_Y": "5",
+                "BLOCK_SIZE_X": "9",
+                "BLOCK_SIZE_Y": "9",
                 "USE_CUDA": true
             }
         },
         {
-            "name": "cpu-serial-grid512x512-block32x32-2d",
-            "displayName": "cpu-serial - 512x512 - Block 32x32 - 2D",
+            "name": "cpu-serial-grid512x512-block16x16-2d",
+            "displayName": "cpu-serial - 512x512 - Block 16x16 - 2D",
             "inherits": "cpu",
             "cacheVariables": {
                 "GRID_ROWS": "512",
                 "GRID_COLS": "512",
-                "BLOCK_SIZE_X": "32",
-                "BLOCK_SIZE_Y": "32",
+                "BLOCK_SIZE_X": "16",
+                "BLOCK_SIZE_Y": "16",
                 "USE_CPU": true,
                 "USE_PARALLEL": false,
                 "ARRAY_2D": true
             }
         },
         {
-            "name": "cpu-parallel-grid512x512-block32x32-2d",
-            "displayName": "cpu-parallel - 512x512 - Block 32x32 - 2D",
+            "name": "cpu-parallel-grid512x512-block16x16-2d",
+            "displayName": "cpu-parallel - 512x512 - Block 16x16 - 2D",
             "inherits": "cpu",
             "cacheVariables": {
                 "GRID_ROWS": "512",
                 "GRID_COLS": "512",
-                "BLOCK_SIZE_X": "32",
-                "BLOCK_SIZE_Y": "32",
+                "BLOCK_SIZE_X": "16",
+                "BLOCK_SIZE_Y": "16",
                 "USE_CPU": true,
                 "USE_PARALLEL": true,
                 "ARRAY_2D": true
             }
         },
         {
-            "name": "opencl-grid512x512-block32x32-2d",
-            "displayName": "opencl - 512x512 - Block 32x32 - 2D",
+            "name": "opencl-grid512x512-block16x16-2d",
+            "displayName": "opencl - 512x512 - Block 16x16 - 2D",
             "inherits": "opencl",
             "cacheVariables": {
                 "GRID_ROWS": "512",
                 "GRID_COLS": "512",
-                "BLOCK_SIZE_X": "32",
-                "BLOCK_SIZE_Y": "32",
+                "BLOCK_SIZE_X": "16",
+                "BLOCK_SIZE_Y": "16",
                 "USE_OPENCL": true,
                 "ARRAY_2D": true
             }
         },
         {
-            "name": "cuda-grid512x512-block32x32-2d",
-            "displayName": "cuda - 512x512 - Block 32x32 - 2D",
+            "name": "cuda-grid512x512-block16x16-2d",
+            "displayName": "cuda - 512x512 - Block 16x16 - 2D",
             "inherits": "cuda",
             "cacheVariables": {
                 "GRID_ROWS": "512",
                 "GRID_COLS": "512",
-                "BLOCK_SIZE_X": "32",
-                "BLOCK_SIZE_Y": "32",
+                "BLOCK_SIZE_X": "16",
+                "BLOCK_SIZE_Y": "16",
                 "USE_CUDA": true,
                 "ARRAY_2D": true
             }
         },
         {
-            "name": "cpu-serial-grid512x512-block30x30-2d-unaligned",
-            "displayName": "cpu-serial - 512x512 - Block 30x30 - 2D - Bad",
+            "name": "cpu-serial-grid512x512-block9x9-2d-unaligned",
+            "displayName": "cpu-serial - 512x512 - Block 9x9 - 2D - Bad",
             "inherits": "cpu",
             "cacheVariables": {
                 "GRID_ROWS": "512",
                 "GRID_COLS": "512",
-                "BLOCK_SIZE_X": "30",
-                "BLOCK_SIZE_Y": "30",
+                "BLOCK_SIZE_X": "9",
+                "BLOCK_SIZE_Y": "9",
                 "USE_CPU": true,
                 "USE_PARALLEL": false,
                 "ARRAY_2D": true
             }
         },
         {
-            "name": "cpu-parallel-grid512x512-block30x30-2d-unaligned",
-            "displayName": "cpu-parallel - 512x512 - Block 30x30 - 2D - Bad",
+            "name": "cpu-parallel-grid512x512-block9x9-2d-unaligned",
+            "displayName": "cpu-parallel - 512x512 - Block 9x9 - 2D - Bad",
             "inherits": "cpu",
             "cacheVariables": {
                 "GRID_ROWS": "512",
                 "GRID_COLS": "512",
-                "BLOCK_SIZE_X": "30",
-                "BLOCK_SIZE_Y": "30",
+                "BLOCK_SIZE_X": "9",
+                "BLOCK_SIZE_Y": "9",
                 "USE_CPU": true,
                 "USE_PARALLEL": true,
                 "ARRAY_2D": true
             }
         },
         {
-            "name": "opencl-grid512x512-block30x30-2d-unaligned",
-            "displayName": "opencl - 512x512 - Block 30x30 - 2D - Bad",
+            "name": "opencl-grid512x512-block9x9-2d-unaligned",
+            "displayName": "opencl - 512x512 - Block 9x9 - 2D - Bad",
             "inherits": "opencl",
             "cacheVariables": {
                 "GRID_ROWS": "512",
                 "GRID_COLS": "512",
-                "BLOCK_SIZE_X": "30",
-                "BLOCK_SIZE_Y": "30",
+                "BLOCK_SIZE_X": "9",
+                "BLOCK_SIZE_Y": "9",
                 "USE_OPENCL": true,
                 "ARRAY_2D": true
             }
         },
         {
-            "name": "cuda-grid512x512-block30x30-2d-unaligned",
-            "displayName": "cuda - 512x512 - Block 30x30 - 2D - Bad",
+            "name": "cuda-grid512x512-block9x9-2d-unaligned",
+            "displayName": "cuda - 512x512 - Block 9x9 - 2D - Bad",
             "inherits": "cuda",
             "cacheVariables": {
                 "GRID_ROWS": "512",
                 "GRID_COLS": "512",
-                "BLOCK_SIZE_X": "30",
-                "BLOCK_SIZE_Y": "30",
+                "BLOCK_SIZE_X": "9",
+                "BLOCK_SIZE_Y": "9",
                 "USE_CUDA": true,
                 "ARRAY_2D": true
             }
         },
         {
-            "name": "cpu-serial-grid512x512-block8x4-1d",
-            "displayName": "cpu-serial - 512x512 - Block 8x4 - 1D",
+            "name": "cpu-serial-grid512x512-block16x16-1d",
+            "displayName": "cpu-serial - 512x512 - Block 16x16 - 1D",
             "inherits": "cpu",
             "cacheVariables": {
                 "GRID_ROWS": "512",
                 "GRID_COLS": "512",
-                "BLOCK_SIZE_X": "8",
-                "BLOCK_SIZE_Y": "4",
+                "BLOCK_SIZE_X": "16",
+                "BLOCK_SIZE_Y": "16",
                 "USE_CPU": true,
                 "USE_PARALLEL": false
             }
         },
         {
-            "name": "cpu-parallel-grid512x512-block8x4-1d",
-            "displayName": "cpu-parallel - 512x512 - Block 8x4 - 1D",
+            "name": "cpu-parallel-grid512x512-block16x16-1d",
+            "displayName": "cpu-parallel - 512x512 - Block 16x16 - 1D",
             "inherits": "cpu",
             "cacheVariables": {
                 "GRID_ROWS": "512",
                 "GRID_COLS": "512",
-                "BLOCK_SIZE_X": "8",
-                "BLOCK_SIZE_Y": "4",
+                "BLOCK_SIZE_X": "16",
+                "BLOCK_SIZE_Y": "16",
                 "USE_CPU": true,
                 "USE_PARALLEL": true
             }
         },
         {
-            "name": "opencl-grid512x512-block8x4-1d",
-            "displayName": "opencl - 512x512 - Block 8x4 - 1D",
+            "name": "opencl-grid512x512-block16x16-1d",
+            "displayName": "opencl - 512x512 - Block 16x16 - 1D",
             "inherits": "opencl",
             "cacheVariables": {
                 "GRID_ROWS": "512",
                 "GRID_COLS": "512",
-                "BLOCK_SIZE_X": "8",
-                "BLOCK_SIZE_Y": "4",
+                "BLOCK_SIZE_X": "16",
+                "BLOCK_SIZE_Y": "16",
                 "USE_OPENCL": true
             }
         },
         {
-            "name": "cuda-grid512x512-block8x4-1d",
-            "displayName": "cuda - 512x512 - Block 8x4 - 1D",
+            "name": "cuda-grid512x512-block16x16-1d",
+            "displayName": "cuda - 512x512 - Block 16x16 - 1D",
             "inherits": "cuda",
             "cacheVariables": {
                 "GRID_ROWS": "512",
                 "GRID_COLS": "512",
-                "BLOCK_SIZE_X": "8",
-                "BLOCK_SIZE_Y": "4",
+                "BLOCK_SIZE_X": "16",
+                "BLOCK_SIZE_Y": "16",
                 "USE_CUDA": true
             }
         },
         {
-            "name": "cpu-serial-grid512x512-block7x5-1d-unaligned",
-            "displayName": "cpu-serial - 512x512 - Block 7x5 - 1D - Bad",
+            "name": "cpu-serial-grid512x512-block9x9-1d-unaligned",
+            "displayName": "cpu-serial - 512x512 - Block 9x9 - 1D - Bad",
             "inherits": "cpu",
             "cacheVariables": {
                 "GRID_ROWS": "512",
                 "GRID_COLS": "512",
-                "BLOCK_SIZE_X": "7",
-                "BLOCK_SIZE_Y": "5",
+                "BLOCK_SIZE_X": "9",
+                "BLOCK_SIZE_Y": "9",
                 "USE_CPU": true,
                 "USE_PARALLEL": false
             }
         },
         {
-            "name": "cpu-parallel-grid512x512-block7x5-1d-unaligned",
-            "displayName": "cpu-parallel - 512x512 - Block 7x5 - 1D - Bad",
+            "name": "cpu-parallel-grid512x512-block9x9-1d-unaligned",
+            "displayName": "cpu-parallel - 512x512 - Block 9x9 - 1D - Bad",
             "inherits": "cpu",
             "cacheVariables": {
                 "GRID_ROWS": "512",
                 "GRID_COLS": "512",
-                "BLOCK_SIZE_X": "7",
-                "BLOCK_SIZE_Y": "5",
+                "BLOCK_SIZE_X": "9",
+                "BLOCK_SIZE_Y": "9",
                 "USE_CPU": true,
                 "USE_PARALLEL": true
             }
         },
         {
-            "name": "opencl-grid512x512-block7x5-1d-unaligned",
-            "displayName": "opencl - 512x512 - Block 7x5 - 1D - Bad",
+            "name": "opencl-grid512x512-block9x9-1d-unaligned",
+            "displayName": "opencl - 512x512 - Block 9x9 - 1D - Bad",
             "inherits": "opencl",
             "cacheVariables": {
                 "GRID_ROWS": "512",
                 "GRID_COLS": "512",
-                "BLOCK_SIZE_X": "7",
-                "BLOCK_SIZE_Y": "5",
+                "BLOCK_SIZE_X": "9",
+                "BLOCK_SIZE_Y": "9",
                 "USE_OPENCL": true
             }
         },
         {
-            "name": "cuda-grid512x512-block7x5-1d-unaligned",
-            "displayName": "cuda - 512x512 - Block 7x5 - 1D - Bad",
+            "name": "cuda-grid512x512-block9x9-1d-unaligned",
+            "displayName": "cuda - 512x512 - Block 9x9 - 1D - Bad",
             "inherits": "cuda",
             "cacheVariables": {
                 "GRID_ROWS": "512",
                 "GRID_COLS": "512",
-                "BLOCK_SIZE_X": "7",
-                "BLOCK_SIZE_Y": "5",
+                "BLOCK_SIZE_X": "9",
+                "BLOCK_SIZE_Y": "9",
                 "USE_CUDA": true
             }
         },
         {
-            "name": "cpu-serial-grid1024x1024-block32x32-2d",
-            "displayName": "cpu-serial - 1024x1024 - Block 32x32 - 2D",
+            "name": "cpu-serial-grid1024x1024-block16x16-2d",
+            "displayName": "cpu-serial - 1024x1024 - Block 16x16 - 2D",
             "inherits": "cpu",
             "cacheVariables": {
                 "GRID_ROWS": "1024",
                 "GRID_COLS": "1024",
-                "BLOCK_SIZE_X": "32",
-                "BLOCK_SIZE_Y": "32",
+                "BLOCK_SIZE_X": "16",
+                "BLOCK_SIZE_Y": "16",
                 "USE_CPU": true,
                 "USE_PARALLEL": false,
                 "ARRAY_2D": true
             }
         },
         {
-            "name": "cpu-parallel-grid1024x1024-block32x32-2d",
-            "displayName": "cpu-parallel - 1024x1024 - Block 32x32 - 2D",
+            "name": "cpu-parallel-grid1024x1024-block16x16-2d",
+            "displayName": "cpu-parallel - 1024x1024 - Block 16x16 - 2D",
             "inherits": "cpu",
             "cacheVariables": {
                 "GRID_ROWS": "1024",
                 "GRID_COLS": "1024",
-                "BLOCK_SIZE_X": "32",
-                "BLOCK_SIZE_Y": "32",
+                "BLOCK_SIZE_X": "16",
+                "BLOCK_SIZE_Y": "16",
                 "USE_CPU": true,
                 "USE_PARALLEL": true,
                 "ARRAY_2D": true
             }
         },
         {
-            "name": "opencl-grid1024x1024-block32x32-2d",
-            "displayName": "opencl - 1024x1024 - Block 32x32 - 2D",
+            "name": "opencl-grid1024x1024-block16x16-2d",
+            "displayName": "opencl - 1024x1024 - Block 16x16 - 2D",
             "inherits": "opencl",
             "cacheVariables": {
                 "GRID_ROWS": "1024",
                 "GRID_COLS": "1024",
-                "BLOCK_SIZE_X": "32",
-                "BLOCK_SIZE_Y": "32",
+                "BLOCK_SIZE_X": "16",
+                "BLOCK_SIZE_Y": "16",
                 "USE_OPENCL": true,
                 "ARRAY_2D": true
             }
         },
         {
-            "name": "cuda-grid1024x1024-block32x32-2d",
-            "displayName": "cuda - 1024x1024 - Block 32x32 - 2D",
+            "name": "cuda-grid1024x1024-block16x16-2d",
+            "displayName": "cuda - 1024x1024 - Block 16x16 - 2D",
             "inherits": "cuda",
             "cacheVariables": {
                 "GRID_ROWS": "1024",
                 "GRID_COLS": "1024",
-                "BLOCK_SIZE_X": "32",
-                "BLOCK_SIZE_Y": "32",
+                "BLOCK_SIZE_X": "16",
+                "BLOCK_SIZE_Y": "16",
                 "USE_CUDA": true,
                 "ARRAY_2D": true
             }
         },
         {
-            "name": "cpu-serial-grid1024x1024-block30x30-2d-unaligned",
-            "displayName": "cpu-serial - 1024x1024 - Block 30x30 - 2D - Bad",
+            "name": "cpu-serial-grid1024x1024-block9x9-2d-unaligned",
+            "displayName": "cpu-serial - 1024x1024 - Block 9x9 - 2D - Bad",
             "inherits": "cpu",
             "cacheVariables": {
                 "GRID_ROWS": "1024",
                 "GRID_COLS": "1024",
-                "BLOCK_SIZE_X": "30",
-                "BLOCK_SIZE_Y": "30",
+                "BLOCK_SIZE_X": "9",
+                "BLOCK_SIZE_Y": "9",
                 "USE_CPU": true,
                 "USE_PARALLEL": false,
                 "ARRAY_2D": true
             }
         },
         {
-            "name": "cpu-parallel-grid1024x1024-block30x30-2d-unaligned",
-            "displayName": "cpu-parallel - 1024x1024 - Block 30x30 - 2D - Bad",
+            "name": "cpu-parallel-grid1024x1024-block9x9-2d-unaligned",
+            "displayName": "cpu-parallel - 1024x1024 - Block 9x9 - 2D - Bad",
             "inherits": "cpu",
             "cacheVariables": {
                 "GRID_ROWS": "1024",
                 "GRID_COLS": "1024",
-                "BLOCK_SIZE_X": "30",
-                "BLOCK_SIZE_Y": "30",
+                "BLOCK_SIZE_X": "9",
+                "BLOCK_SIZE_Y": "9",
                 "USE_CPU": true,
                 "USE_PARALLEL": true,
                 "ARRAY_2D": true
             }
         },
         {
-            "name": "opencl-grid1024x1024-block30x30-2d-unaligned",
-            "displayName": "opencl - 1024x1024 - Block 30x30 - 2D - Bad",
+            "name": "opencl-grid1024x1024-block9x9-2d-unaligned",
+            "displayName": "opencl - 1024x1024 - Block 9x9 - 2D - Bad",
             "inherits": "opencl",
             "cacheVariables": {
                 "GRID_ROWS": "1024",
                 "GRID_COLS": "1024",
-                "BLOCK_SIZE_X": "30",
-                "BLOCK_SIZE_Y": "30",
+                "BLOCK_SIZE_X": "9",
+                "BLOCK_SIZE_Y": "9",
                 "USE_OPENCL": true,
                 "ARRAY_2D": true
             }
         },
         {
-            "name": "cuda-grid1024x1024-block30x30-2d-unaligned",
-            "displayName": "cuda - 1024x1024 - Block 30x30 - 2D - Bad",
+            "name": "cuda-grid1024x1024-block9x9-2d-unaligned",
+            "displayName": "cuda - 1024x1024 - Block 9x9 - 2D - Bad",
             "inherits": "cuda",
             "cacheVariables": {
                 "GRID_ROWS": "1024",
                 "GRID_COLS": "1024",
-                "BLOCK_SIZE_X": "30",
-                "BLOCK_SIZE_Y": "30",
+                "BLOCK_SIZE_X": "9",
+                "BLOCK_SIZE_Y": "9",
                 "USE_CUDA": true,
                 "ARRAY_2D": true
             }
         },
         {
-            "name": "cpu-serial-grid1024x1024-block8x4-1d",
-            "displayName": "cpu-serial - 1024x1024 - Block 8x4 - 1D",
+            "name": "cpu-serial-grid1024x1024-block16x16-1d",
+            "displayName": "cpu-serial - 1024x1024 - Block 16x16 - 1D",
             "inherits": "cpu",
             "cacheVariables": {
                 "GRID_ROWS": "1024",
                 "GRID_COLS": "1024",
-                "BLOCK_SIZE_X": "8",
-                "BLOCK_SIZE_Y": "4",
+                "BLOCK_SIZE_X": "16",
+                "BLOCK_SIZE_Y": "16",
                 "USE_CPU": true,
                 "USE_PARALLEL": false
             }
         },
         {
-            "name": "cpu-parallel-grid1024x1024-block8x4-1d",
-            "displayName": "cpu-parallel - 1024x1024 - Block 8x4 - 1D",
+            "name": "cpu-parallel-grid1024x1024-block16x16-1d",
+            "displayName": "cpu-parallel - 1024x1024 - Block 16x16 - 1D",
             "inherits": "cpu",
             "cacheVariables": {
                 "GRID_ROWS": "1024",
                 "GRID_COLS": "1024",
-                "BLOCK_SIZE_X": "8",
-                "BLOCK_SIZE_Y": "4",
+                "BLOCK_SIZE_X": "16",
+                "BLOCK_SIZE_Y": "16",
                 "USE_CPU": true,
                 "USE_PARALLEL": true
             }
         },
         {
-            "name": "opencl-grid1024x1024-block8x4-1d",
-            "displayName": "opencl - 1024x1024 - Block 8x4 - 1D",
+            "name": "opencl-grid1024x1024-block16x16-1d",
+            "displayName": "opencl - 1024x1024 - Block 16x16 - 1D",
             "inherits": "opencl",
             "cacheVariables": {
                 "GRID_ROWS": "1024",
                 "GRID_COLS": "1024",
-                "BLOCK_SIZE_X": "8",
-                "BLOCK_SIZE_Y": "4",
+                "BLOCK_SIZE_X": "16",
+                "BLOCK_SIZE_Y": "16",
                 "USE_OPENCL": true
             }
         },
         {
-            "name": "cuda-grid1024x1024-block8x4-1d",
-            "displayName": "cuda - 1024x1024 - Block 8x4 - 1D",
+            "name": "cuda-grid1024x1024-block16x16-1d",
+            "displayName": "cuda - 1024x1024 - Block 16x16 - 1D",
             "inherits": "cuda",
             "cacheVariables": {
                 "GRID_ROWS": "1024",
                 "GRID_COLS": "1024",
-                "BLOCK_SIZE_X": "8",
-                "BLOCK_SIZE_Y": "4",
+                "BLOCK_SIZE_X": "16",
+                "BLOCK_SIZE_Y": "16",
                 "USE_CUDA": true
             }
         },
         {
-            "name": "cpu-serial-grid1024x1024-block7x5-1d-unaligned",
-            "displayName": "cpu-serial - 1024x1024 - Block 7x5 - 1D - Bad",
+            "name": "cpu-serial-grid1024x1024-block9x9-1d-unaligned",
+            "displayName": "cpu-serial - 1024x1024 - Block 9x9 - 1D - Bad",
             "inherits": "cpu",
             "cacheVariables": {
                 "GRID_ROWS": "1024",
                 "GRID_COLS": "1024",
-                "BLOCK_SIZE_X": "7",
-                "BLOCK_SIZE_Y": "5",
+                "BLOCK_SIZE_X": "9",
+                "BLOCK_SIZE_Y": "9",
                 "USE_CPU": true,
                 "USE_PARALLEL": false
             }
         },
         {
-            "name": "cpu-parallel-grid1024x1024-block7x5-1d-unaligned",
-            "displayName": "cpu-parallel - 1024x1024 - Block 7x5 - 1D - Bad",
+            "name": "cpu-parallel-grid1024x1024-block9x9-1d-unaligned",
+            "displayName": "cpu-parallel - 1024x1024 - Block 9x9 - 1D - Bad",
             "inherits": "cpu",
             "cacheVariables": {
                 "GRID_ROWS": "1024",
                 "GRID_COLS": "1024",
-                "BLOCK_SIZE_X": "7",
-                "BLOCK_SIZE_Y": "5",
+                "BLOCK_SIZE_X": "9",
+                "BLOCK_SIZE_Y": "9",
                 "USE_CPU": true,
                 "USE_PARALLEL": true
             }
         },
         {
-            "name": "opencl-grid1024x1024-block7x5-1d-unaligned",
-            "displayName": "opencl - 1024x1024 - Block 7x5 - 1D - Bad",
+            "name": "opencl-grid1024x1024-block9x9-1d-unaligned",
+            "displayName": "opencl - 1024x1024 - Block 9x9 - 1D - Bad",
             "inherits": "opencl",
             "cacheVariables": {
                 "GRID_ROWS": "1024",
                 "GRID_COLS": "1024",
-                "BLOCK_SIZE_X": "7",
-                "BLOCK_SIZE_Y": "5",
+                "BLOCK_SIZE_X": "9",
+                "BLOCK_SIZE_Y": "9",
                 "USE_OPENCL": true
             }
         },
         {
-            "name": "cuda-grid1024x1024-block7x5-1d-unaligned",
-            "displayName": "cuda - 1024x1024 - Block 7x5 - 1D - Bad",
+            "name": "cuda-grid1024x1024-block9x9-1d-unaligned",
+            "displayName": "cuda - 1024x1024 - Block 9x9 - 1D - Bad",
             "inherits": "cuda",
             "cacheVariables": {
                 "GRID_ROWS": "1024",
                 "GRID_COLS": "1024",
-                "BLOCK_SIZE_X": "7",
-                "BLOCK_SIZE_Y": "5",
+                "BLOCK_SIZE_X": "9",
+                "BLOCK_SIZE_Y": "9",
                 "USE_CUDA": true
             }
         },
         {
-            "name": "cpu-serial-grid2048x4096-block32x32-2d",
-            "displayName": "cpu-serial - 2048x4096 - Block 32x32 - 2D",
+            "name": "cpu-serial-grid2048x4096-block16x16-2d",
+            "displayName": "cpu-serial - 2048x4096 - Block 16x16 - 2D",
             "inherits": "cpu",
             "cacheVariables": {
                 "GRID_ROWS": "2048",
                 "GRID_COLS": "4096",
-                "BLOCK_SIZE_X": "32",
-                "BLOCK_SIZE_Y": "32",
+                "BLOCK_SIZE_X": "16",
+                "BLOCK_SIZE_Y": "16",
                 "USE_CPU": true,
                 "USE_PARALLEL": false,
                 "ARRAY_2D": true
             }
         },
         {
-            "name": "cpu-parallel-grid2048x4096-block32x32-2d",
-            "displayName": "cpu-parallel - 2048x4096 - Block 32x32 - 2D",
+            "name": "cpu-parallel-grid2048x4096-block16x16-2d",
+            "displayName": "cpu-parallel - 2048x4096 - Block 16x16 - 2D",
             "inherits": "cpu",
             "cacheVariables": {
                 "GRID_ROWS": "2048",
                 "GRID_COLS": "4096",
-                "BLOCK_SIZE_X": "32",
-                "BLOCK_SIZE_Y": "32",
+                "BLOCK_SIZE_X": "16",
+                "BLOCK_SIZE_Y": "16",
                 "USE_CPU": true,
                 "USE_PARALLEL": true,
                 "ARRAY_2D": true
             }
         },
         {
-            "name": "opencl-grid2048x4096-block32x32-2d",
-            "displayName": "opencl - 2048x4096 - Block 32x32 - 2D",
+            "name": "opencl-grid2048x4096-block16x16-2d",
+            "displayName": "opencl - 2048x4096 - Block 16x16 - 2D",
             "inherits": "opencl",
             "cacheVariables": {
                 "GRID_ROWS": "2048",
                 "GRID_COLS": "4096",
-                "BLOCK_SIZE_X": "32",
-                "BLOCK_SIZE_Y": "32",
+                "BLOCK_SIZE_X": "16",
+                "BLOCK_SIZE_Y": "16",
                 "USE_OPENCL": true,
                 "ARRAY_2D": true
             }
         },
         {
-            "name": "cuda-grid2048x4096-block32x32-2d",
-            "displayName": "cuda - 2048x4096 - Block 32x32 - 2D",
+            "name": "cuda-grid2048x4096-block16x16-2d",
+            "displayName": "cuda - 2048x4096 - Block 16x16 - 2D",
             "inherits": "cuda",
             "cacheVariables": {
                 "GRID_ROWS": "2048",
                 "GRID_COLS": "4096",
-                "BLOCK_SIZE_X": "32",
-                "BLOCK_SIZE_Y": "32",
+                "BLOCK_SIZE_X": "16",
+                "BLOCK_SIZE_Y": "16",
                 "USE_CUDA": true,
                 "ARRAY_2D": true
             }
         },
         {
-            "name": "cpu-serial-grid2048x4096-block30x30-2d-unaligned",
-            "displayName": "cpu-serial - 2048x4096 - Block 30x30 - 2D - Bad",
+            "name": "cpu-serial-grid2048x4096-block9x9-2d-unaligned",
+            "displayName": "cpu-serial - 2048x4096 - Block 9x9 - 2D - Bad",
             "inherits": "cpu",
             "cacheVariables": {
                 "GRID_ROWS": "2048",
                 "GRID_COLS": "4096",
-                "BLOCK_SIZE_X": "30",
-                "BLOCK_SIZE_Y": "30",
+                "BLOCK_SIZE_X": "9",
+                "BLOCK_SIZE_Y": "9",
                 "USE_CPU": true,
                 "USE_PARALLEL": false,
                 "ARRAY_2D": true
             }
         },
         {
-            "name": "cpu-parallel-grid2048x4096-block30x30-2d-unaligned",
-            "displayName": "cpu-parallel - 2048x4096 - Block 30x30 - 2D - Bad",
+            "name": "cpu-parallel-grid2048x4096-block9x9-2d-unaligned",
+            "displayName": "cpu-parallel - 2048x4096 - Block 9x9 - 2D - Bad",
             "inherits": "cpu",
             "cacheVariables": {
                 "GRID_ROWS": "2048",
                 "GRID_COLS": "4096",
-                "BLOCK_SIZE_X": "30",
-                "BLOCK_SIZE_Y": "30",
+                "BLOCK_SIZE_X": "9",
+                "BLOCK_SIZE_Y": "9",
                 "USE_CPU": true,
                 "USE_PARALLEL": true,
                 "ARRAY_2D": true
             }
         },
         {
-            "name": "opencl-grid2048x4096-block30x30-2d-unaligned",
-            "displayName": "opencl - 2048x4096 - Block 30x30 - 2D - Bad",
+            "name": "opencl-grid2048x4096-block9x9-2d-unaligned",
+            "displayName": "opencl - 2048x4096 - Block 9x9 - 2D - Bad",
             "inherits": "opencl",
             "cacheVariables": {
                 "GRID_ROWS": "2048",
                 "GRID_COLS": "4096",
-                "BLOCK_SIZE_X": "30",
-                "BLOCK_SIZE_Y": "30",
+                "BLOCK_SIZE_X": "9",
+                "BLOCK_SIZE_Y": "9",
                 "USE_OPENCL": true,
                 "ARRAY_2D": true
             }
         },
         {
-            "name": "cuda-grid2048x4096-block30x30-2d-unaligned",
-            "displayName": "cuda - 2048x4096 - Block 30x30 - 2D - Bad",
+            "name": "cuda-grid2048x4096-block9x9-2d-unaligned",
+            "displayName": "cuda - 2048x4096 - Block 9x9 - 2D - Bad",
             "inherits": "cuda",
             "cacheVariables": {
                 "GRID_ROWS": "2048",
                 "GRID_COLS": "4096",
-                "BLOCK_SIZE_X": "30",
-                "BLOCK_SIZE_Y": "30",
+                "BLOCK_SIZE_X": "9",
+                "BLOCK_SIZE_Y": "9",
                 "USE_CUDA": true,
                 "ARRAY_2D": true
             }
         },
         {
-            "name": "cpu-serial-grid2048x4096-block8x4-1d",
-            "displayName": "cpu-serial - 2048x4096 - Block 8x4 - 1D",
+            "name": "cpu-serial-grid2048x4096-block16x16-1d",
+            "displayName": "cpu-serial - 2048x4096 - Block 16x16 - 1D",
             "inherits": "cpu",
             "cacheVariables": {
                 "GRID_ROWS": "2048",
                 "GRID_COLS": "4096",
-                "BLOCK_SIZE_X": "8",
-                "BLOCK_SIZE_Y": "4",
+                "BLOCK_SIZE_X": "16",
+                "BLOCK_SIZE_Y": "16",
                 "USE_CPU": true,
                 "USE_PARALLEL": false
             }
         },
         {
-            "name": "cpu-parallel-grid2048x4096-block8x4-1d",
-            "displayName": "cpu-parallel - 2048x4096 - Block 8x4 - 1D",
+            "name": "cpu-parallel-grid2048x4096-block16x16-1d",
+            "displayName": "cpu-parallel - 2048x4096 - Block 16x16 - 1D",
             "inherits": "cpu",
             "cacheVariables": {
                 "GRID_ROWS": "2048",
                 "GRID_COLS": "4096",
-                "BLOCK_SIZE_X": "8",
-                "BLOCK_SIZE_Y": "4",
+                "BLOCK_SIZE_X": "16",
+                "BLOCK_SIZE_Y": "16",
                 "USE_CPU": true,
                 "USE_PARALLEL": true
             }
         },
         {
-            "name": "opencl-grid2048x4096-block8x4-1d",
-            "displayName": "opencl - 2048x4096 - Block 8x4 - 1D",
+            "name": "opencl-grid2048x4096-block16x16-1d",
+            "displayName": "opencl - 2048x4096 - Block 16x16 - 1D",
             "inherits": "opencl",
             "cacheVariables": {
                 "GRID_ROWS": "2048",
                 "GRID_COLS": "4096",
-                "BLOCK_SIZE_X": "8",
-                "BLOCK_SIZE_Y": "4",
+                "BLOCK_SIZE_X": "16",
+                "BLOCK_SIZE_Y": "16",
                 "USE_OPENCL": true
             }
         },
         {
-            "name": "cuda-grid2048x4096-block8x4-1d",
-            "displayName": "cuda - 2048x4096 - Block 8x4 - 1D",
+            "name": "cuda-grid2048x4096-block16x16-1d",
+            "displayName": "cuda - 2048x4096 - Block 16x16 - 1D",
             "inherits": "cuda",
             "cacheVariables": {
                 "GRID_ROWS": "2048",
                 "GRID_COLS": "4096",
-                "BLOCK_SIZE_X": "8",
-                "BLOCK_SIZE_Y": "4",
+                "BLOCK_SIZE_X": "16",
+                "BLOCK_SIZE_Y": "16",
                 "USE_CUDA": true
             }
         },
         {
-            "name": "cpu-serial-grid2048x4096-block7x5-1d-unaligned",
-            "displayName": "cpu-serial - 2048x4096 - Block 7x5 - 1D - Bad",
+            "name": "cpu-serial-grid2048x4096-block9x9-1d-unaligned",
+            "displayName": "cpu-serial - 2048x4096 - Block 9x9 - 1D - Bad",
             "inherits": "cpu",
             "cacheVariables": {
                 "GRID_ROWS": "2048",
                 "GRID_COLS": "4096",
-                "BLOCK_SIZE_X": "7",
-                "BLOCK_SIZE_Y": "5",
+                "BLOCK_SIZE_X": "9",
+                "BLOCK_SIZE_Y": "9",
                 "USE_CPU": true,
                 "USE_PARALLEL": false
             }
         },
         {
-            "name": "cpu-parallel-grid2048x4096-block7x5-1d-unaligned",
-            "displayName": "cpu-parallel - 2048x4096 - Block 7x5 - 1D - Bad",
+            "name": "cpu-parallel-grid2048x4096-block9x9-1d-unaligned",
+            "displayName": "cpu-parallel - 2048x4096 - Block 9x9 - 1D - Bad",
             "inherits": "cpu",
             "cacheVariables": {
                 "GRID_ROWS": "2048",
                 "GRID_COLS": "4096",
-                "BLOCK_SIZE_X": "7",
-                "BLOCK_SIZE_Y": "5",
+                "BLOCK_SIZE_X": "9",
+                "BLOCK_SIZE_Y": "9",
                 "USE_CPU": true,
                 "USE_PARALLEL": true
             }
         },
         {
-            "name": "opencl-grid2048x4096-block7x5-1d-unaligned",
-            "displayName": "opencl - 2048x4096 - Block 7x5 - 1D - Bad",
+            "name": "opencl-grid2048x4096-block9x9-1d-unaligned",
+            "displayName": "opencl - 2048x4096 - Block 9x9 - 1D - Bad",
             "inherits": "opencl",
             "cacheVariables": {
                 "GRID_ROWS": "2048",
                 "GRID_COLS": "4096",
-                "BLOCK_SIZE_X": "7",
-                "BLOCK_SIZE_Y": "5",
+                "BLOCK_SIZE_X": "9",
+                "BLOCK_SIZE_Y": "9",
                 "USE_OPENCL": true
             }
         },
         {
-            "name": "cuda-grid2048x4096-block7x5-1d-unaligned",
-            "displayName": "cuda - 2048x4096 - Block 7x5 - 1D - Bad",
+            "name": "cuda-grid2048x4096-block9x9-1d-unaligned",
+            "displayName": "cuda - 2048x4096 - Block 9x9 - 1D - Bad",
             "inherits": "cuda",
             "cacheVariables": {
                 "GRID_ROWS": "2048",
                 "GRID_COLS": "4096",
-                "BLOCK_SIZE_X": "7",
-                "BLOCK_SIZE_Y": "5",
+                "BLOCK_SIZE_X": "9",
+                "BLOCK_SIZE_Y": "9",
                 "USE_CUDA": true
             }
         },
         {
-            "name": "cpu-serial-grid8192x8192-block32x32-2d",
-            "displayName": "cpu-serial - 8192x8192 - Block 32x32 - 2D",
+            "name": "cpu-serial-grid8192x8192-block16x16-2d",
+            "displayName": "cpu-serial - 8192x8192 - Block 16x16 - 2D",
             "inherits": "cpu",
             "cacheVariables": {
                 "GRID_ROWS": "8192",
                 "GRID_COLS": "8192",
-                "BLOCK_SIZE_X": "32",
-                "BLOCK_SIZE_Y": "32",
+                "BLOCK_SIZE_X": "16",
+                "BLOCK_SIZE_Y": "16",
                 "USE_CPU": true,
                 "USE_PARALLEL": false,
                 "ARRAY_2D": true
             }
         },
         {
-            "name": "cpu-parallel-grid8192x8192-block32x32-2d",
-            "displayName": "cpu-parallel - 8192x8192 - Block 32x32 - 2D",
+            "name": "cpu-parallel-grid8192x8192-block16x16-2d",
+            "displayName": "cpu-parallel - 8192x8192 - Block 16x16 - 2D",
             "inherits": "cpu",
             "cacheVariables": {
                 "GRID_ROWS": "8192",
                 "GRID_COLS": "8192",
-                "BLOCK_SIZE_X": "32",
-                "BLOCK_SIZE_Y": "32",
+                "BLOCK_SIZE_X": "16",
+                "BLOCK_SIZE_Y": "16",
                 "USE_CPU": true,
                 "USE_PARALLEL": true,
                 "ARRAY_2D": true
             }
         },
         {
-            "name": "opencl-grid8192x8192-block32x32-2d",
-            "displayName": "opencl - 8192x8192 - Block 32x32 - 2D",
+            "name": "opencl-grid8192x8192-block16x16-2d",
+            "displayName": "opencl - 8192x8192 - Block 16x16 - 2D",
             "inherits": "opencl",
             "cacheVariables": {
                 "GRID_ROWS": "8192",
                 "GRID_COLS": "8192",
-                "BLOCK_SIZE_X": "32",
-                "BLOCK_SIZE_Y": "32",
+                "BLOCK_SIZE_X": "16",
+                "BLOCK_SIZE_Y": "16",
                 "USE_OPENCL": true,
                 "ARRAY_2D": true
             }
         },
         {
-            "name": "cuda-grid8192x8192-block32x32-2d",
-            "displayName": "cuda - 8192x8192 - Block 32x32 - 2D",
+            "name": "cuda-grid8192x8192-block16x16-2d",
+            "displayName": "cuda - 8192x8192 - Block 16x16 - 2D",
             "inherits": "cuda",
             "cacheVariables": {
                 "GRID_ROWS": "8192",
                 "GRID_COLS": "8192",
-                "BLOCK_SIZE_X": "32",
-                "BLOCK_SIZE_Y": "32",
+                "BLOCK_SIZE_X": "16",
+                "BLOCK_SIZE_Y": "16",
                 "USE_CUDA": true,
                 "ARRAY_2D": true
             }
         },
         {
-            "name": "cpu-serial-grid8192x8192-block30x30-2d-unaligned",
-            "displayName": "cpu-serial - 8192x8192 - Block 30x30 - 2D - Bad",
+            "name": "cpu-serial-grid8192x8192-block9x9-2d-unaligned",
+            "displayName": "cpu-serial - 8192x8192 - Block 9x9 - 2D - Bad",
             "inherits": "cpu",
             "cacheVariables": {
                 "GRID_ROWS": "8192",
                 "GRID_COLS": "8192",
-                "BLOCK_SIZE_X": "30",
-                "BLOCK_SIZE_Y": "30",
+                "BLOCK_SIZE_X": "9",
+                "BLOCK_SIZE_Y": "9",
                 "USE_CPU": true,
                 "USE_PARALLEL": false,
                 "ARRAY_2D": true
             }
         },
         {
-            "name": "cpu-parallel-grid8192x8192-block30x30-2d-unaligned",
-            "displayName": "cpu-parallel - 8192x8192 - Block 30x30 - 2D - Bad",
+            "name": "cpu-parallel-grid8192x8192-block9x9-2d-unaligned",
+            "displayName": "cpu-parallel - 8192x8192 - Block 9x9 - 2D - Bad",
             "inherits": "cpu",
             "cacheVariables": {
                 "GRID_ROWS": "8192",
                 "GRID_COLS": "8192",
-                "BLOCK_SIZE_X": "30",
-                "BLOCK_SIZE_Y": "30",
+                "BLOCK_SIZE_X": "9",
+                "BLOCK_SIZE_Y": "9",
                 "USE_CPU": true,
                 "USE_PARALLEL": true,
                 "ARRAY_2D": true
             }
         },
         {
-            "name": "opencl-grid8192x8192-block30x30-2d-unaligned",
-            "displayName": "opencl - 8192x8192 - Block 30x30 - 2D - Bad",
+            "name": "opencl-grid8192x8192-block9x9-2d-unaligned",
+            "displayName": "opencl - 8192x8192 - Block 9x9 - 2D - Bad",
             "inherits": "opencl",
             "cacheVariables": {
                 "GRID_ROWS": "8192",
                 "GRID_COLS": "8192",
-                "BLOCK_SIZE_X": "30",
-                "BLOCK_SIZE_Y": "30",
+                "BLOCK_SIZE_X": "9",
+                "BLOCK_SIZE_Y": "9",
                 "USE_OPENCL": true,
                 "ARRAY_2D": true
             }
         },
         {
-            "name": "cuda-grid8192x8192-block30x30-2d-unaligned",
-            "displayName": "cuda - 8192x8192 - Block 30x30 - 2D - Bad",
+            "name": "cuda-grid8192x8192-block9x9-2d-unaligned",
+            "displayName": "cuda - 8192x8192 - Block 9x9 - 2D - Bad",
             "inherits": "cuda",
             "cacheVariables": {
                 "GRID_ROWS": "8192",
                 "GRID_COLS": "8192",
-                "BLOCK_SIZE_X": "30",
-                "BLOCK_SIZE_Y": "30",
+                "BLOCK_SIZE_X": "9",
+                "BLOCK_SIZE_Y": "9",
                 "USE_CUDA": true,
                 "ARRAY_2D": true
             }
         },
         {
-            "name": "cpu-serial-grid8192x8192-block8x4-1d",
-            "displayName": "cpu-serial - 8192x8192 - Block 8x4 - 1D",
+            "name": "cpu-serial-grid8192x8192-block16x16-1d",
+            "displayName": "cpu-serial - 8192x8192 - Block 16x16 - 1D",
             "inherits": "cpu",
             "cacheVariables": {
                 "GRID_ROWS": "8192",
                 "GRID_COLS": "8192",
-                "BLOCK_SIZE_X": "8",
-                "BLOCK_SIZE_Y": "4",
+                "BLOCK_SIZE_X": "16",
+                "BLOCK_SIZE_Y": "16",
                 "USE_CPU": true,
                 "USE_PARALLEL": false
             }
         },
         {
-            "name": "cpu-parallel-grid8192x8192-block8x4-1d",
-            "displayName": "cpu-parallel - 8192x8192 - Block 8x4 - 1D",
+            "name": "cpu-parallel-grid8192x8192-block16x16-1d",
+            "displayName": "cpu-parallel - 8192x8192 - Block 16x16 - 1D",
             "inherits": "cpu",
             "cacheVariables": {
                 "GRID_ROWS": "8192",
                 "GRID_COLS": "8192",
-                "BLOCK_SIZE_X": "8",
-                "BLOCK_SIZE_Y": "4",
+                "BLOCK_SIZE_X": "16",
+                "BLOCK_SIZE_Y": "16",
                 "USE_CPU": true,
                 "USE_PARALLEL": true
             }
         },
         {
-            "name": "opencl-grid8192x8192-block8x4-1d",
-            "displayName": "opencl - 8192x8192 - Block 8x4 - 1D",
+            "name": "opencl-grid8192x8192-block16x16-1d",
+            "displayName": "opencl - 8192x8192 - Block 16x16 - 1D",
             "inherits": "opencl",
             "cacheVariables": {
                 "GRID_ROWS": "8192",
                 "GRID_COLS": "8192",
-                "BLOCK_SIZE_X": "8",
-                "BLOCK_SIZE_Y": "4",
+                "BLOCK_SIZE_X": "16",
+                "BLOCK_SIZE_Y": "16",
                 "USE_OPENCL": true
             }
         },
         {
-            "name": "cuda-grid8192x8192-block8x4-1d",
-            "displayName": "cuda - 8192x8192 - Block 8x4 - 1D",
+            "name": "cuda-grid8192x8192-block16x16-1d",
+            "displayName": "cuda - 8192x8192 - Block 16x16 - 1D",
             "inherits": "cuda",
             "cacheVariables": {
                 "GRID_ROWS": "8192",
                 "GRID_COLS": "8192",
-                "BLOCK_SIZE_X": "8",
-                "BLOCK_SIZE_Y": "4",
+                "BLOCK_SIZE_X": "16",
+                "BLOCK_SIZE_Y": "16",
                 "USE_CUDA": true
             }
         },
         {
-            "name": "cpu-serial-grid8192x8192-block7x5-1d-unaligned",
-            "displayName": "cpu-serial - 8192x8192 - Block 7x5 - 1D - Bad",
+            "name": "cpu-serial-grid8192x8192-block9x9-1d-unaligned",
+            "displayName": "cpu-serial - 8192x8192 - Block 9x9 - 1D - Bad",
             "inherits": "cpu",
             "cacheVariables": {
                 "GRID_ROWS": "8192",
                 "GRID_COLS": "8192",
-                "BLOCK_SIZE_X": "7",
-                "BLOCK_SIZE_Y": "5",
+                "BLOCK_SIZE_X": "9",
+                "BLOCK_SIZE_Y": "9",
                 "USE_CPU": true,
                 "USE_PARALLEL": false
             }
         },
         {
-            "name": "cpu-parallel-grid8192x8192-block7x5-1d-unaligned",
-            "displayName": "cpu-parallel - 8192x8192 - Block 7x5 - 1D - Bad",
+            "name": "cpu-parallel-grid8192x8192-block9x9-1d-unaligned",
+            "displayName": "cpu-parallel - 8192x8192 - Block 9x9 - 1D - Bad",
             "inherits": "cpu",
             "cacheVariables": {
                 "GRID_ROWS": "8192",
                 "GRID_COLS": "8192",
-                "BLOCK_SIZE_X": "7",
-                "BLOCK_SIZE_Y": "5",
+                "BLOCK_SIZE_X": "9",
+                "BLOCK_SIZE_Y": "9",
                 "USE_CPU": true,
                 "USE_PARALLEL": true
             }
         },
         {
-            "name": "opencl-grid8192x8192-block7x5-1d-unaligned",
-            "displayName": "opencl - 8192x8192 - Block 7x5 - 1D - Bad",
+            "name": "opencl-grid8192x8192-block9x9-1d-unaligned",
+            "displayName": "opencl - 8192x8192 - Block 9x9 - 1D - Bad",
             "inherits": "opencl",
             "cacheVariables": {
                 "GRID_ROWS": "8192",
                 "GRID_COLS": "8192",
-                "BLOCK_SIZE_X": "7",
-                "BLOCK_SIZE_Y": "5",
+                "BLOCK_SIZE_X": "9",
+                "BLOCK_SIZE_Y": "9",
                 "USE_OPENCL": true
             }
         },
         {
-            "name": "cuda-grid8192x8192-block7x5-1d-unaligned",
-            "displayName": "cuda - 8192x8192 - Block 7x5 - 1D - Bad",
+            "name": "cuda-grid8192x8192-block9x9-1d-unaligned",
+            "displayName": "cuda - 8192x8192 - Block 9x9 - 1D - Bad",
             "inherits": "cuda",
             "cacheVariables": {
                 "GRID_ROWS": "8192",
                 "GRID_COLS": "8192",
-                "BLOCK_SIZE_X": "7",
-                "BLOCK_SIZE_Y": "5",
+                "BLOCK_SIZE_X": "9",
+                "BLOCK_SIZE_Y": "9",
                 "USE_CUDA": true
             }
         },
         {
-            "name": "cpu-serial-grid32768x32768-block32x32-2d",
-            "displayName": "cpu-serial - 32768x32768 - Block 32x32 - 2D",
+            "name": "cpu-serial-grid32768x32768-block16x16-2d",
+            "displayName": "cpu-serial - 32768x32768 - Block 16x16 - 2D",
             "inherits": "cpu",
             "cacheVariables": {
                 "GRID_ROWS": "32768",
                 "GRID_COLS": "32768",
-                "BLOCK_SIZE_X": "32",
-                "BLOCK_SIZE_Y": "32",
+                "BLOCK_SIZE_X": "16",
+                "BLOCK_SIZE_Y": "16",
                 "USE_CPU": true,
                 "USE_PARALLEL": false,
                 "ARRAY_2D": true
             }
         },
         {
-            "name": "cpu-parallel-grid32768x32768-block32x32-2d",
-            "displayName": "cpu-parallel - 32768x32768 - Block 32x32 - 2D",
+            "name": "cpu-parallel-grid32768x32768-block16x16-2d",
+            "displayName": "cpu-parallel - 32768x32768 - Block 16x16 - 2D",
             "inherits": "cpu",
             "cacheVariables": {
                 "GRID_ROWS": "32768",
                 "GRID_COLS": "32768",
-                "BLOCK_SIZE_X": "32",
-                "BLOCK_SIZE_Y": "32",
+                "BLOCK_SIZE_X": "16",
+                "BLOCK_SIZE_Y": "16",
                 "USE_CPU": true,
                 "USE_PARALLEL": true,
                 "ARRAY_2D": true
             }
         },
         {
-            "name": "opencl-grid32768x32768-block32x32-2d",
-            "displayName": "opencl - 32768x32768 - Block 32x32 - 2D",
+            "name": "opencl-grid32768x32768-block16x16-2d",
+            "displayName": "opencl - 32768x32768 - Block 16x16 - 2D",
             "inherits": "opencl",
             "cacheVariables": {
                 "GRID_ROWS": "32768",
                 "GRID_COLS": "32768",
-                "BLOCK_SIZE_X": "32",
-                "BLOCK_SIZE_Y": "32",
+                "BLOCK_SIZE_X": "16",
+                "BLOCK_SIZE_Y": "16",
                 "USE_OPENCL": true,
                 "ARRAY_2D": true
             }
         },
         {
-            "name": "cuda-grid32768x32768-block32x32-2d",
-            "displayName": "cuda - 32768x32768 - Block 32x32 - 2D",
+            "name": "cuda-grid32768x32768-block16x16-2d",
+            "displayName": "cuda - 32768x32768 - Block 16x16 - 2D",
             "inherits": "cuda",
             "cacheVariables": {
                 "GRID_ROWS": "32768",
                 "GRID_COLS": "32768",
-                "BLOCK_SIZE_X": "32",
-                "BLOCK_SIZE_Y": "32",
+                "BLOCK_SIZE_X": "16",
+                "BLOCK_SIZE_Y": "16",
                 "USE_CUDA": true,
                 "ARRAY_2D": true
             }
         },
         {
-            "name": "cpu-serial-grid32768x32768-block30x30-2d-unaligned",
-            "displayName": "cpu-serial - 32768x32768 - Block 30x30 - 2D - Bad",
+            "name": "cpu-serial-grid32768x32768-block9x9-2d-unaligned",
+            "displayName": "cpu-serial - 32768x32768 - Block 9x9 - 2D - Bad",
             "inherits": "cpu",
             "cacheVariables": {
                 "GRID_ROWS": "32768",
                 "GRID_COLS": "32768",
-                "BLOCK_SIZE_X": "30",
-                "BLOCK_SIZE_Y": "30",
+                "BLOCK_SIZE_X": "9",
+                "BLOCK_SIZE_Y": "9",
                 "USE_CPU": true,
                 "USE_PARALLEL": false,
                 "ARRAY_2D": true
             }
         },
         {
-            "name": "cpu-parallel-grid32768x32768-block30x30-2d-unaligned",
-            "displayName": "cpu-parallel - 32768x32768 - Block 30x30 - 2D - Bad",
+            "name": "cpu-parallel-grid32768x32768-block9x9-2d-unaligned",
+            "displayName": "cpu-parallel - 32768x32768 - Block 9x9 - 2D - Bad",
             "inherits": "cpu",
             "cacheVariables": {
                 "GRID_ROWS": "32768",
                 "GRID_COLS": "32768",
-                "BLOCK_SIZE_X": "30",
-                "BLOCK_SIZE_Y": "30",
+                "BLOCK_SIZE_X": "9",
+                "BLOCK_SIZE_Y": "9",
                 "USE_CPU": true,
                 "USE_PARALLEL": true,
                 "ARRAY_2D": true
             }
         },
         {
-            "name": "opencl-grid32768x32768-block30x30-2d-unaligned",
-            "displayName": "opencl - 32768x32768 - Block 30x30 - 2D - Bad",
+            "name": "opencl-grid32768x32768-block9x9-2d-unaligned",
+            "displayName": "opencl - 32768x32768 - Block 9x9 - 2D - Bad",
             "inherits": "opencl",
             "cacheVariables": {
                 "GRID_ROWS": "32768",
                 "GRID_COLS": "32768",
-                "BLOCK_SIZE_X": "30",
-                "BLOCK_SIZE_Y": "30",
+                "BLOCK_SIZE_X": "9",
+                "BLOCK_SIZE_Y": "9",
                 "USE_OPENCL": true,
                 "ARRAY_2D": true
             }
         },
         {
-            "name": "cuda-grid32768x32768-block30x30-2d-unaligned",
-            "displayName": "cuda - 32768x32768 - Block 30x30 - 2D - Bad",
+            "name": "cuda-grid32768x32768-block9x9-2d-unaligned",
+            "displayName": "cuda - 32768x32768 - Block 9x9 - 2D - Bad",
             "inherits": "cuda",
             "cacheVariables": {
                 "GRID_ROWS": "32768",
                 "GRID_COLS": "32768",
-                "BLOCK_SIZE_X": "30",
-                "BLOCK_SIZE_Y": "30",
+                "BLOCK_SIZE_X": "9",
+                "BLOCK_SIZE_Y": "9",
                 "USE_CUDA": true,
                 "ARRAY_2D": true
             }
         },
         {
-            "name": "cpu-serial-grid32768x32768-block8x4-1d",
-            "displayName": "cpu-serial - 32768x32768 - Block 8x4 - 1D",
+            "name": "cpu-serial-grid32768x32768-block16x16-1d",
+            "displayName": "cpu-serial - 32768x32768 - Block 16x16 - 1D",
             "inherits": "cpu",
             "cacheVariables": {
                 "GRID_ROWS": "32768",
                 "GRID_COLS": "32768",
-                "BLOCK_SIZE_X": "8",
-                "BLOCK_SIZE_Y": "4",
+                "BLOCK_SIZE_X": "16",
+                "BLOCK_SIZE_Y": "16",
                 "USE_CPU": true,
                 "USE_PARALLEL": false
             }
         },
         {
-            "name": "cpu-parallel-grid32768x32768-block8x4-1d",
-            "displayName": "cpu-parallel - 32768x32768 - Block 8x4 - 1D",
+            "name": "cpu-parallel-grid32768x32768-block16x16-1d",
+            "displayName": "cpu-parallel - 32768x32768 - Block 16x16 - 1D",
             "inherits": "cpu",
             "cacheVariables": {
                 "GRID_ROWS": "32768",
                 "GRID_COLS": "32768",
-                "BLOCK_SIZE_X": "8",
-                "BLOCK_SIZE_Y": "4",
+                "BLOCK_SIZE_X": "16",
+                "BLOCK_SIZE_Y": "16",
                 "USE_CPU": true,
                 "USE_PARALLEL": true
             }
         },
         {
-            "name": "opencl-grid32768x32768-block8x4-1d",
-            "displayName": "opencl - 32768x32768 - Block 8x4 - 1D",
+            "name": "opencl-grid32768x32768-block16x16-1d",
+            "displayName": "opencl - 32768x32768 - Block 16x16 - 1D",
             "inherits": "opencl",
             "cacheVariables": {
                 "GRID_ROWS": "32768",
                 "GRID_COLS": "32768",
-                "BLOCK_SIZE_X": "8",
-                "BLOCK_SIZE_Y": "4",
+                "BLOCK_SIZE_X": "16",
+                "BLOCK_SIZE_Y": "16",
                 "USE_OPENCL": true
             }
         },
         {
-            "name": "cuda-grid32768x32768-block8x4-1d",
-            "displayName": "cuda - 32768x32768 - Block 8x4 - 1D",
+            "name": "cuda-grid32768x32768-block16x16-1d",
+            "displayName": "cuda - 32768x32768 - Block 16x16 - 1D",
             "inherits": "cuda",
             "cacheVariables": {
                 "GRID_ROWS": "32768",
                 "GRID_COLS": "32768",
-                "BLOCK_SIZE_X": "8",
-                "BLOCK_SIZE_Y": "4",
+                "BLOCK_SIZE_X": "16",
+                "BLOCK_SIZE_Y": "16",
                 "USE_CUDA": true
             }
         },
         {
-            "name": "cpu-serial-grid32768x32768-block7x5-1d-unaligned",
-            "displayName": "cpu-serial - 32768x32768 - Block 7x5 - 1D - Bad",
+            "name": "cpu-serial-grid32768x32768-block9x9-1d-unaligned",
+            "displayName": "cpu-serial - 32768x32768 - Block 9x9 - 1D - Bad",
             "inherits": "cpu",
             "cacheVariables": {
                 "GRID_ROWS": "32768",
                 "GRID_COLS": "32768",
-                "BLOCK_SIZE_X": "7",
-                "BLOCK_SIZE_Y": "5",
+                "BLOCK_SIZE_X": "9",
+                "BLOCK_SIZE_Y": "9",
                 "USE_CPU": true,
                 "USE_PARALLEL": false
             }
         },
         {
-            "name": "cpu-parallel-grid32768x32768-block7x5-1d-unaligned",
-            "displayName": "cpu-parallel - 32768x32768 - Block 7x5 - 1D - Bad",
+            "name": "cpu-parallel-grid32768x32768-block9x9-1d-unaligned",
+            "displayName": "cpu-parallel - 32768x32768 - Block 9x9 - 1D - Bad",
             "inherits": "cpu",
             "cacheVariables": {
                 "GRID_ROWS": "32768",
                 "GRID_COLS": "32768",
-                "BLOCK_SIZE_X": "7",
-                "BLOCK_SIZE_Y": "5",
+                "BLOCK_SIZE_X": "9",
+                "BLOCK_SIZE_Y": "9",
                 "USE_CPU": true,
                 "USE_PARALLEL": true
             }
         },
         {
-            "name": "opencl-grid32768x32768-block7x5-1d-unaligned",
-            "displayName": "opencl - 32768x32768 - Block 7x5 - 1D - Bad",
+            "name": "opencl-grid32768x32768-block9x9-1d-unaligned",
+            "displayName": "opencl - 32768x32768 - Block 9x9 - 1D - Bad",
             "inherits": "opencl",
             "cacheVariables": {
                 "GRID_ROWS": "32768",
                 "GRID_COLS": "32768",
-                "BLOCK_SIZE_X": "7",
-                "BLOCK_SIZE_Y": "5",
+                "BLOCK_SIZE_X": "9",
+                "BLOCK_SIZE_Y": "9",
                 "USE_OPENCL": true
             }
         },
         {
-            "name": "cuda-grid32768x32768-block7x5-1d-unaligned",
-            "displayName": "cuda - 32768x32768 - Block 7x5 - 1D - Bad",
+            "name": "cuda-grid32768x32768-block9x9-1d-unaligned",
+            "displayName": "cuda - 32768x32768 - Block 9x9 - 1D - Bad",
             "inherits": "cuda",
             "cacheVariables": {
                 "GRID_ROWS": "32768",
                 "GRID_COLS": "32768",
-                "BLOCK_SIZE_X": "7",
-                "BLOCK_SIZE_Y": "5",
+                "BLOCK_SIZE_X": "9",
+                "BLOCK_SIZE_Y": "9",
                 "USE_CUDA": true
             }
         }
     ],
     "buildPresets": [
         {
-            "name": "cpu-serial-grid128x64-block32x32-2d",
-            "displayName": "cpu-serial - 128x64 - Block 32x32 - 2D",
+            "name": "cpu-serial-grid128x64-block16x16-2d",
+            "displayName": "cpu-serial - 128x64 - Block 16x16 - 2D",
             "description": "",
-            "configurePreset": "cpu-serial-grid128x64-block32x32-2d"
+            "configurePreset": "cpu-serial-grid128x64-block16x16-2d"
         },
         {
-            "name": "cpu-parallel-grid128x64-block32x32-2d",
-            "displayName": "cpu-parallel - 128x64 - Block 32x32 - 2D",
+            "name": "cpu-parallel-grid128x64-block16x16-2d",
+            "displayName": "cpu-parallel - 128x64 - Block 16x16 - 2D",
             "description": "",
-            "configurePreset": "cpu-parallel-grid128x64-block32x32-2d"
+            "configurePreset": "cpu-parallel-grid128x64-block16x16-2d"
         },
         {
-            "name": "opencl-grid128x64-block32x32-2d",
-            "displayName": "opencl - 128x64 - Block 32x32 - 2D",
+            "name": "opencl-grid128x64-block16x16-2d",
+            "displayName": "opencl - 128x64 - Block 16x16 - 2D",
             "description": "",
-            "configurePreset": "opencl-grid128x64-block32x32-2d"
+            "configurePreset": "opencl-grid128x64-block16x16-2d"
         },
         {
-            "name": "cuda-grid128x64-block32x32-2d",
-            "displayName": "cuda - 128x64 - Block 32x32 - 2D",
+            "name": "cuda-grid128x64-block16x16-2d",
+            "displayName": "cuda - 128x64 - Block 16x16 - 2D",
             "description": "",
-            "configurePreset": "cuda-grid128x64-block32x32-2d"
+            "configurePreset": "cuda-grid128x64-block16x16-2d"
         },
         {
-            "name": "cpu-serial-grid128x64-block30x30-2d-unaligned",
-            "displayName": "cpu-serial - 128x64 - Block 30x30 - 2D - Bad",
+            "name": "cpu-serial-grid128x64-block9x9-2d-unaligned",
+            "displayName": "cpu-serial - 128x64 - Block 9x9 - 2D - Bad",
             "description": "",
-            "configurePreset": "cpu-serial-grid128x64-block30x30-2d-unaligned"
+            "configurePreset": "cpu-serial-grid128x64-block9x9-2d-unaligned"
         },
         {
-            "name": "cpu-parallel-grid128x64-block30x30-2d-unaligned",
-            "displayName": "cpu-parallel - 128x64 - Block 30x30 - 2D - Bad",
+            "name": "cpu-parallel-grid128x64-block9x9-2d-unaligned",
+            "displayName": "cpu-parallel - 128x64 - Block 9x9 - 2D - Bad",
             "description": "",
-            "configurePreset": "cpu-parallel-grid128x64-block30x30-2d-unaligned"
+            "configurePreset": "cpu-parallel-grid128x64-block9x9-2d-unaligned"
         },
         {
-            "name": "opencl-grid128x64-block30x30-2d-unaligned",
-            "displayName": "opencl - 128x64 - Block 30x30 - 2D - Bad",
+            "name": "opencl-grid128x64-block9x9-2d-unaligned",
+            "displayName": "opencl - 128x64 - Block 9x9 - 2D - Bad",
             "description": "",
-            "configurePreset": "opencl-grid128x64-block30x30-2d-unaligned"
+            "configurePreset": "opencl-grid128x64-block9x9-2d-unaligned"
         },
         {
-            "name": "cuda-grid128x64-block30x30-2d-unaligned",
-            "displayName": "cuda - 128x64 - Block 30x30 - 2D - Bad",
+            "name": "cuda-grid128x64-block9x9-2d-unaligned",
+            "displayName": "cuda - 128x64 - Block 9x9 - 2D - Bad",
             "description": "",
-            "configurePreset": "cuda-grid128x64-block30x30-2d-unaligned"
+            "configurePreset": "cuda-grid128x64-block9x9-2d-unaligned"
         },
         {
-            "name": "cpu-serial-grid128x64-block8x4-1d",
-            "displayName": "cpu-serial - 128x64 - Block 8x4 - 1D",
+            "name": "cpu-serial-grid128x64-block16x16-1d",
+            "displayName": "cpu-serial - 128x64 - Block 16x16 - 1D",
             "description": "",
-            "configurePreset": "cpu-serial-grid128x64-block8x4-1d"
+            "configurePreset": "cpu-serial-grid128x64-block16x16-1d"
         },
         {
-            "name": "cpu-parallel-grid128x64-block8x4-1d",
-            "displayName": "cpu-parallel - 128x64 - Block 8x4 - 1D",
+            "name": "cpu-parallel-grid128x64-block16x16-1d",
+            "displayName": "cpu-parallel - 128x64 - Block 16x16 - 1D",
             "description": "",
-            "configurePreset": "cpu-parallel-grid128x64-block8x4-1d"
+            "configurePreset": "cpu-parallel-grid128x64-block16x16-1d"
         },
         {
-            "name": "opencl-grid128x64-block8x4-1d",
-            "displayName": "opencl - 128x64 - Block 8x4 - 1D",
+            "name": "opencl-grid128x64-block16x16-1d",
+            "displayName": "opencl - 128x64 - Block 16x16 - 1D",
             "description": "",
-            "configurePreset": "opencl-grid128x64-block8x4-1d"
+            "configurePreset": "opencl-grid128x64-block16x16-1d"
         },
         {
-            "name": "cuda-grid128x64-block8x4-1d",
-            "displayName": "cuda - 128x64 - Block 8x4 - 1D",
+            "name": "cuda-grid128x64-block16x16-1d",
+            "displayName": "cuda - 128x64 - Block 16x16 - 1D",
             "description": "",
-            "configurePreset": "cuda-grid128x64-block8x4-1d"
+            "configurePreset": "cuda-grid128x64-block16x16-1d"
         },
         {
-            "name": "cpu-serial-grid128x64-block7x5-1d-unaligned",
-            "displayName": "cpu-serial - 128x64 - Block 7x5 - 1D - Bad",
+            "name": "cpu-serial-grid128x64-block9x9-1d-unaligned",
+            "displayName": "cpu-serial - 128x64 - Block 9x9 - 1D - Bad",
             "description": "",
-            "configurePreset": "cpu-serial-grid128x64-block7x5-1d-unaligned"
+            "configurePreset": "cpu-serial-grid128x64-block9x9-1d-unaligned"
         },
         {
-            "name": "cpu-parallel-grid128x64-block7x5-1d-unaligned",
-            "displayName": "cpu-parallel - 128x64 - Block 7x5 - 1D - Bad",
+            "name": "cpu-parallel-grid128x64-block9x9-1d-unaligned",
+            "displayName": "cpu-parallel - 128x64 - Block 9x9 - 1D - Bad",
             "description": "",
-            "configurePreset": "cpu-parallel-grid128x64-block7x5-1d-unaligned"
+            "configurePreset": "cpu-parallel-grid128x64-block9x9-1d-unaligned"
         },
         {
-            "name": "opencl-grid128x64-block7x5-1d-unaligned",
-            "displayName": "opencl - 128x64 - Block 7x5 - 1D - Bad",
+            "name": "opencl-grid128x64-block9x9-1d-unaligned",
+            "displayName": "opencl - 128x64 - Block 9x9 - 1D - Bad",
             "description": "",
-            "configurePreset": "opencl-grid128x64-block7x5-1d-unaligned"
+            "configurePreset": "opencl-grid128x64-block9x9-1d-unaligned"
         },
         {
-            "name": "cuda-grid128x64-block7x5-1d-unaligned",
-            "displayName": "cuda - 128x64 - Block 7x5 - 1D - Bad",
+            "name": "cuda-grid128x64-block9x9-1d-unaligned",
+            "displayName": "cuda - 128x64 - Block 9x9 - 1D - Bad",
             "description": "",
-            "configurePreset": "cuda-grid128x64-block7x5-1d-unaligned"
+            "configurePreset": "cuda-grid128x64-block9x9-1d-unaligned"
         },
         {
-            "name": "cpu-serial-grid512x512-block32x32-2d",
-            "displayName": "cpu-serial - 512x512 - Block 32x32 - 2D",
+            "name": "cpu-serial-grid512x512-block16x16-2d",
+            "displayName": "cpu-serial - 512x512 - Block 16x16 - 2D",
             "description": "",
-            "configurePreset": "cpu-serial-grid512x512-block32x32-2d"
+            "configurePreset": "cpu-serial-grid512x512-block16x16-2d"
         },
         {
-            "name": "cpu-parallel-grid512x512-block32x32-2d",
-            "displayName": "cpu-parallel - 512x512 - Block 32x32 - 2D",
+            "name": "cpu-parallel-grid512x512-block16x16-2d",
+            "displayName": "cpu-parallel - 512x512 - Block 16x16 - 2D",
             "description": "",
-            "configurePreset": "cpu-parallel-grid512x512-block32x32-2d"
+            "configurePreset": "cpu-parallel-grid512x512-block16x16-2d"
         },
         {
-            "name": "opencl-grid512x512-block32x32-2d",
-            "displayName": "opencl - 512x512 - Block 32x32 - 2D",
+            "name": "opencl-grid512x512-block16x16-2d",
+            "displayName": "opencl - 512x512 - Block 16x16 - 2D",
             "description": "",
-            "configurePreset": "opencl-grid512x512-block32x32-2d"
+            "configurePreset": "opencl-grid512x512-block16x16-2d"
         },
         {
-            "name": "cuda-grid512x512-block32x32-2d",
-            "displayName": "cuda - 512x512 - Block 32x32 - 2D",
+            "name": "cuda-grid512x512-block16x16-2d",
+            "displayName": "cuda - 512x512 - Block 16x16 - 2D",
             "description": "",
-            "configurePreset": "cuda-grid512x512-block32x32-2d"
+            "configurePreset": "cuda-grid512x512-block16x16-2d"
         },
         {
-            "name": "cpu-serial-grid512x512-block30x30-2d-unaligned",
-            "displayName": "cpu-serial - 512x512 - Block 30x30 - 2D - Bad",
+            "name": "cpu-serial-grid512x512-block9x9-2d-unaligned",
+            "displayName": "cpu-serial - 512x512 - Block 9x9 - 2D - Bad",
             "description": "",
-            "configurePreset": "cpu-serial-grid512x512-block30x30-2d-unaligned"
+            "configurePreset": "cpu-serial-grid512x512-block9x9-2d-unaligned"
         },
         {
-            "name": "cpu-parallel-grid512x512-block30x30-2d-unaligned",
-            "displayName": "cpu-parallel - 512x512 - Block 30x30 - 2D - Bad",
+            "name": "cpu-parallel-grid512x512-block9x9-2d-unaligned",
+            "displayName": "cpu-parallel - 512x512 - Block 9x9 - 2D - Bad",
             "description": "",
-            "configurePreset": "cpu-parallel-grid512x512-block30x30-2d-unaligned"
+            "configurePreset": "cpu-parallel-grid512x512-block9x9-2d-unaligned"
         },
         {
-            "name": "opencl-grid512x512-block30x30-2d-unaligned",
-            "displayName": "opencl - 512x512 - Block 30x30 - 2D - Bad",
+            "name": "opencl-grid512x512-block9x9-2d-unaligned",
+            "displayName": "opencl - 512x512 - Block 9x9 - 2D - Bad",
             "description": "",
-            "configurePreset": "opencl-grid512x512-block30x30-2d-unaligned"
+            "configurePreset": "opencl-grid512x512-block9x9-2d-unaligned"
         },
         {
-            "name": "cuda-grid512x512-block30x30-2d-unaligned",
-            "displayName": "cuda - 512x512 - Block 30x30 - 2D - Bad",
+            "name": "cuda-grid512x512-block9x9-2d-unaligned",
+            "displayName": "cuda - 512x512 - Block 9x9 - 2D - Bad",
             "description": "",
-            "configurePreset": "cuda-grid512x512-block30x30-2d-unaligned"
+            "configurePreset": "cuda-grid512x512-block9x9-2d-unaligned"
         },
         {
-            "name": "cpu-serial-grid512x512-block8x4-1d",
-            "displayName": "cpu-serial - 512x512 - Block 8x4 - 1D",
+            "name": "cpu-serial-grid512x512-block16x16-1d",
+            "displayName": "cpu-serial - 512x512 - Block 16x16 - 1D",
             "description": "",
-            "configurePreset": "cpu-serial-grid512x512-block8x4-1d"
+            "configurePreset": "cpu-serial-grid512x512-block16x16-1d"
         },
         {
-            "name": "cpu-parallel-grid512x512-block8x4-1d",
-            "displayName": "cpu-parallel - 512x512 - Block 8x4 - 1D",
+            "name": "cpu-parallel-grid512x512-block16x16-1d",
+            "displayName": "cpu-parallel - 512x512 - Block 16x16 - 1D",
             "description": "",
-            "configurePreset": "cpu-parallel-grid512x512-block8x4-1d"
+            "configurePreset": "cpu-parallel-grid512x512-block16x16-1d"
         },
         {
-            "name": "opencl-grid512x512-block8x4-1d",
-            "displayName": "opencl - 512x512 - Block 8x4 - 1D",
+            "name": "opencl-grid512x512-block16x16-1d",
+            "displayName": "opencl - 512x512 - Block 16x16 - 1D",
             "description": "",
-            "configurePreset": "opencl-grid512x512-block8x4-1d"
+            "configurePreset": "opencl-grid512x512-block16x16-1d"
         },
         {
-            "name": "cuda-grid512x512-block8x4-1d",
-            "displayName": "cuda - 512x512 - Block 8x4 - 1D",
+            "name": "cuda-grid512x512-block16x16-1d",
+            "displayName": "cuda - 512x512 - Block 16x16 - 1D",
             "description": "",
-            "configurePreset": "cuda-grid512x512-block8x4-1d"
+            "configurePreset": "cuda-grid512x512-block16x16-1d"
         },
         {
-            "name": "cpu-serial-grid512x512-block7x5-1d-unaligned",
-            "displayName": "cpu-serial - 512x512 - Block 7x5 - 1D - Bad",
+            "name": "cpu-serial-grid512x512-block9x9-1d-unaligned",
+            "displayName": "cpu-serial - 512x512 - Block 9x9 - 1D - Bad",
             "description": "",
-            "configurePreset": "cpu-serial-grid512x512-block7x5-1d-unaligned"
+            "configurePreset": "cpu-serial-grid512x512-block9x9-1d-unaligned"
         },
         {
-            "name": "cpu-parallel-grid512x512-block7x5-1d-unaligned",
-            "displayName": "cpu-parallel - 512x512 - Block 7x5 - 1D - Bad",
+            "name": "cpu-parallel-grid512x512-block9x9-1d-unaligned",
+            "displayName": "cpu-parallel - 512x512 - Block 9x9 - 1D - Bad",
             "description": "",
-            "configurePreset": "cpu-parallel-grid512x512-block7x5-1d-unaligned"
+            "configurePreset": "cpu-parallel-grid512x512-block9x9-1d-unaligned"
         },
         {
-            "name": "opencl-grid512x512-block7x5-1d-unaligned",
-            "displayName": "opencl - 512x512 - Block 7x5 - 1D - Bad",
+            "name": "opencl-grid512x512-block9x9-1d-unaligned",
+            "displayName": "opencl - 512x512 - Block 9x9 - 1D - Bad",
             "description": "",
-            "configurePreset": "opencl-grid512x512-block7x5-1d-unaligned"
+            "configurePreset": "opencl-grid512x512-block9x9-1d-unaligned"
         },
         {
-            "name": "cuda-grid512x512-block7x5-1d-unaligned",
-            "displayName": "cuda - 512x512 - Block 7x5 - 1D - Bad",
+            "name": "cuda-grid512x512-block9x9-1d-unaligned",
+            "displayName": "cuda - 512x512 - Block 9x9 - 1D - Bad",
             "description": "",
-            "configurePreset": "cuda-grid512x512-block7x5-1d-unaligned"
+            "configurePreset": "cuda-grid512x512-block9x9-1d-unaligned"
         },
         {
-            "name": "cpu-serial-grid1024x1024-block32x32-2d",
-            "displayName": "cpu-serial - 1024x1024 - Block 32x32 - 2D",
+            "name": "cpu-serial-grid1024x1024-block16x16-2d",
+            "displayName": "cpu-serial - 1024x1024 - Block 16x16 - 2D",
             "description": "",
-            "configurePreset": "cpu-serial-grid1024x1024-block32x32-2d"
+            "configurePreset": "cpu-serial-grid1024x1024-block16x16-2d"
         },
         {
-            "name": "cpu-parallel-grid1024x1024-block32x32-2d",
-            "displayName": "cpu-parallel - 1024x1024 - Block 32x32 - 2D",
+            "name": "cpu-parallel-grid1024x1024-block16x16-2d",
+            "displayName": "cpu-parallel - 1024x1024 - Block 16x16 - 2D",
             "description": "",
-            "configurePreset": "cpu-parallel-grid1024x1024-block32x32-2d"
+            "configurePreset": "cpu-parallel-grid1024x1024-block16x16-2d"
         },
         {
-            "name": "opencl-grid1024x1024-block32x32-2d",
-            "displayName": "opencl - 1024x1024 - Block 32x32 - 2D",
+            "name": "opencl-grid1024x1024-block16x16-2d",
+            "displayName": "opencl - 1024x1024 - Block 16x16 - 2D",
             "description": "",
-            "configurePreset": "opencl-grid1024x1024-block32x32-2d"
+            "configurePreset": "opencl-grid1024x1024-block16x16-2d"
         },
         {
-            "name": "cuda-grid1024x1024-block32x32-2d",
-            "displayName": "cuda - 1024x1024 - Block 32x32 - 2D",
+            "name": "cuda-grid1024x1024-block16x16-2d",
+            "displayName": "cuda - 1024x1024 - Block 16x16 - 2D",
             "description": "",
-            "configurePreset": "cuda-grid1024x1024-block32x32-2d"
+            "configurePreset": "cuda-grid1024x1024-block16x16-2d"
         },
         {
-            "name": "cpu-serial-grid1024x1024-block30x30-2d-unaligned",
-            "displayName": "cpu-serial - 1024x1024 - Block 30x30 - 2D - Bad",
+            "name": "cpu-serial-grid1024x1024-block9x9-2d-unaligned",
+            "displayName": "cpu-serial - 1024x1024 - Block 9x9 - 2D - Bad",
             "description": "",
-            "configurePreset": "cpu-serial-grid1024x1024-block30x30-2d-unaligned"
+            "configurePreset": "cpu-serial-grid1024x1024-block9x9-2d-unaligned"
         },
         {
-            "name": "cpu-parallel-grid1024x1024-block30x30-2d-unaligned",
-            "displayName": "cpu-parallel - 1024x1024 - Block 30x30 - 2D - Bad",
+            "name": "cpu-parallel-grid1024x1024-block9x9-2d-unaligned",
+            "displayName": "cpu-parallel - 1024x1024 - Block 9x9 - 2D - Bad",
             "description": "",
-            "configurePreset": "cpu-parallel-grid1024x1024-block30x30-2d-unaligned"
+            "configurePreset": "cpu-parallel-grid1024x1024-block9x9-2d-unaligned"
         },
         {
-            "name": "opencl-grid1024x1024-block30x30-2d-unaligned",
-            "displayName": "opencl - 1024x1024 - Block 30x30 - 2D - Bad",
+            "name": "opencl-grid1024x1024-block9x9-2d-unaligned",
+            "displayName": "opencl - 1024x1024 - Block 9x9 - 2D - Bad",
             "description": "",
-            "configurePreset": "opencl-grid1024x1024-block30x30-2d-unaligned"
+            "configurePreset": "opencl-grid1024x1024-block9x9-2d-unaligned"
         },
         {
-            "name": "cuda-grid1024x1024-block30x30-2d-unaligned",
-            "displayName": "cuda - 1024x1024 - Block 30x30 - 2D - Bad",
+            "name": "cuda-grid1024x1024-block9x9-2d-unaligned",
+            "displayName": "cuda - 1024x1024 - Block 9x9 - 2D - Bad",
             "description": "",
-            "configurePreset": "cuda-grid1024x1024-block30x30-2d-unaligned"
+            "configurePreset": "cuda-grid1024x1024-block9x9-2d-unaligned"
         },
         {
-            "name": "cpu-serial-grid1024x1024-block8x4-1d",
-            "displayName": "cpu-serial - 1024x1024 - Block 8x4 - 1D",
+            "name": "cpu-serial-grid1024x1024-block16x16-1d",
+            "displayName": "cpu-serial - 1024x1024 - Block 16x16 - 1D",
             "description": "",
-            "configurePreset": "cpu-serial-grid1024x1024-block8x4-1d"
+            "configurePreset": "cpu-serial-grid1024x1024-block16x16-1d"
         },
         {
-            "name": "cpu-parallel-grid1024x1024-block8x4-1d",
-            "displayName": "cpu-parallel - 1024x1024 - Block 8x4 - 1D",
+            "name": "cpu-parallel-grid1024x1024-block16x16-1d",
+            "displayName": "cpu-parallel - 1024x1024 - Block 16x16 - 1D",
             "description": "",
-            "configurePreset": "cpu-parallel-grid1024x1024-block8x4-1d"
+            "configurePreset": "cpu-parallel-grid1024x1024-block16x16-1d"
         },
         {
-            "name": "opencl-grid1024x1024-block8x4-1d",
-            "displayName": "opencl - 1024x1024 - Block 8x4 - 1D",
+            "name": "opencl-grid1024x1024-block16x16-1d",
+            "displayName": "opencl - 1024x1024 - Block 16x16 - 1D",
             "description": "",
-            "configurePreset": "opencl-grid1024x1024-block8x4-1d"
+            "configurePreset": "opencl-grid1024x1024-block16x16-1d"
         },
         {
-            "name": "cuda-grid1024x1024-block8x4-1d",
-            "displayName": "cuda - 1024x1024 - Block 8x4 - 1D",
+            "name": "cuda-grid1024x1024-block16x16-1d",
+            "displayName": "cuda - 1024x1024 - Block 16x16 - 1D",
             "description": "",
-            "configurePreset": "cuda-grid1024x1024-block8x4-1d"
+            "configurePreset": "cuda-grid1024x1024-block16x16-1d"
         },
         {
-            "name": "cpu-serial-grid1024x1024-block7x5-1d-unaligned",
-            "displayName": "cpu-serial - 1024x1024 - Block 7x5 - 1D - Bad",
+            "name": "cpu-serial-grid1024x1024-block9x9-1d-unaligned",
+            "displayName": "cpu-serial - 1024x1024 - Block 9x9 - 1D - Bad",
             "description": "",
-            "configurePreset": "cpu-serial-grid1024x1024-block7x5-1d-unaligned"
+            "configurePreset": "cpu-serial-grid1024x1024-block9x9-1d-unaligned"
         },
         {
-            "name": "cpu-parallel-grid1024x1024-block7x5-1d-unaligned",
-            "displayName": "cpu-parallel - 1024x1024 - Block 7x5 - 1D - Bad",
+            "name": "cpu-parallel-grid1024x1024-block9x9-1d-unaligned",
+            "displayName": "cpu-parallel - 1024x1024 - Block 9x9 - 1D - Bad",
             "description": "",
-            "configurePreset": "cpu-parallel-grid1024x1024-block7x5-1d-unaligned"
+            "configurePreset": "cpu-parallel-grid1024x1024-block9x9-1d-unaligned"
         },
         {
-            "name": "opencl-grid1024x1024-block7x5-1d-unaligned",
-            "displayName": "opencl - 1024x1024 - Block 7x5 - 1D - Bad",
+            "name": "opencl-grid1024x1024-block9x9-1d-unaligned",
+            "displayName": "opencl - 1024x1024 - Block 9x9 - 1D - Bad",
             "description": "",
-            "configurePreset": "opencl-grid1024x1024-block7x5-1d-unaligned"
+            "configurePreset": "opencl-grid1024x1024-block9x9-1d-unaligned"
         },
         {
-            "name": "cuda-grid1024x1024-block7x5-1d-unaligned",
-            "displayName": "cuda - 1024x1024 - Block 7x5 - 1D - Bad",
+            "name": "cuda-grid1024x1024-block9x9-1d-unaligned",
+            "displayName": "cuda - 1024x1024 - Block 9x9 - 1D - Bad",
             "description": "",
-            "configurePreset": "cuda-grid1024x1024-block7x5-1d-unaligned"
+            "configurePreset": "cuda-grid1024x1024-block9x9-1d-unaligned"
         },
         {
-            "name": "cpu-serial-grid2048x4096-block32x32-2d",
-            "displayName": "cpu-serial - 2048x4096 - Block 32x32 - 2D",
+            "name": "cpu-serial-grid2048x4096-block16x16-2d",
+            "displayName": "cpu-serial - 2048x4096 - Block 16x16 - 2D",
             "description": "",
-            "configurePreset": "cpu-serial-grid2048x4096-block32x32-2d"
+            "configurePreset": "cpu-serial-grid2048x4096-block16x16-2d"
         },
         {
-            "name": "cpu-parallel-grid2048x4096-block32x32-2d",
-            "displayName": "cpu-parallel - 2048x4096 - Block 32x32 - 2D",
+            "name": "cpu-parallel-grid2048x4096-block16x16-2d",
+            "displayName": "cpu-parallel - 2048x4096 - Block 16x16 - 2D",
             "description": "",
-            "configurePreset": "cpu-parallel-grid2048x4096-block32x32-2d"
+            "configurePreset": "cpu-parallel-grid2048x4096-block16x16-2d"
         },
         {
-            "name": "opencl-grid2048x4096-block32x32-2d",
-            "displayName": "opencl - 2048x4096 - Block 32x32 - 2D",
+            "name": "opencl-grid2048x4096-block16x16-2d",
+            "displayName": "opencl - 2048x4096 - Block 16x16 - 2D",
             "description": "",
-            "configurePreset": "opencl-grid2048x4096-block32x32-2d"
+            "configurePreset": "opencl-grid2048x4096-block16x16-2d"
         },
         {
-            "name": "cuda-grid2048x4096-block32x32-2d",
-            "displayName": "cuda - 2048x4096 - Block 32x32 - 2D",
+            "name": "cuda-grid2048x4096-block16x16-2d",
+            "displayName": "cuda - 2048x4096 - Block 16x16 - 2D",
             "description": "",
-            "configurePreset": "cuda-grid2048x4096-block32x32-2d"
+            "configurePreset": "cuda-grid2048x4096-block16x16-2d"
         },
         {
-            "name": "cpu-serial-grid2048x4096-block30x30-2d-unaligned",
-            "displayName": "cpu-serial - 2048x4096 - Block 30x30 - 2D - Bad",
+            "name": "cpu-serial-grid2048x4096-block9x9-2d-unaligned",
+            "displayName": "cpu-serial - 2048x4096 - Block 9x9 - 2D - Bad",
             "description": "",
-            "configurePreset": "cpu-serial-grid2048x4096-block30x30-2d-unaligned"
+            "configurePreset": "cpu-serial-grid2048x4096-block9x9-2d-unaligned"
         },
         {
-            "name": "cpu-parallel-grid2048x4096-block30x30-2d-unaligned",
-            "displayName": "cpu-parallel - 2048x4096 - Block 30x30 - 2D - Bad",
+            "name": "cpu-parallel-grid2048x4096-block9x9-2d-unaligned",
+            "displayName": "cpu-parallel - 2048x4096 - Block 9x9 - 2D - Bad",
             "description": "",
-            "configurePreset": "cpu-parallel-grid2048x4096-block30x30-2d-unaligned"
+            "configurePreset": "cpu-parallel-grid2048x4096-block9x9-2d-unaligned"
         },
         {
-            "name": "opencl-grid2048x4096-block30x30-2d-unaligned",
-            "displayName": "opencl - 2048x4096 - Block 30x30 - 2D - Bad",
+            "name": "opencl-grid2048x4096-block9x9-2d-unaligned",
+            "displayName": "opencl - 2048x4096 - Block 9x9 - 2D - Bad",
             "description": "",
-            "configurePreset": "opencl-grid2048x4096-block30x30-2d-unaligned"
+            "configurePreset": "opencl-grid2048x4096-block9x9-2d-unaligned"
         },
         {
-            "name": "cuda-grid2048x4096-block30x30-2d-unaligned",
-            "displayName": "cuda - 2048x4096 - Block 30x30 - 2D - Bad",
+            "name": "cuda-grid2048x4096-block9x9-2d-unaligned",
+            "displayName": "cuda - 2048x4096 - Block 9x9 - 2D - Bad",
             "description": "",
-            "configurePreset": "cuda-grid2048x4096-block30x30-2d-unaligned"
+            "configurePreset": "cuda-grid2048x4096-block9x9-2d-unaligned"
         },
         {
-            "name": "cpu-serial-grid2048x4096-block8x4-1d",
-            "displayName": "cpu-serial - 2048x4096 - Block 8x4 - 1D",
+            "name": "cpu-serial-grid2048x4096-block16x16-1d",
+            "displayName": "cpu-serial - 2048x4096 - Block 16x16 - 1D",
             "description": "",
-            "configurePreset": "cpu-serial-grid2048x4096-block8x4-1d"
+            "configurePreset": "cpu-serial-grid2048x4096-block16x16-1d"
         },
         {
-            "name": "cpu-parallel-grid2048x4096-block8x4-1d",
-            "displayName": "cpu-parallel - 2048x4096 - Block 8x4 - 1D",
+            "name": "cpu-parallel-grid2048x4096-block16x16-1d",
+            "displayName": "cpu-parallel - 2048x4096 - Block 16x16 - 1D",
             "description": "",
-            "configurePreset": "cpu-parallel-grid2048x4096-block8x4-1d"
+            "configurePreset": "cpu-parallel-grid2048x4096-block16x16-1d"
         },
         {
-            "name": "opencl-grid2048x4096-block8x4-1d",
-            "displayName": "opencl - 2048x4096 - Block 8x4 - 1D",
+            "name": "opencl-grid2048x4096-block16x16-1d",
+            "displayName": "opencl - 2048x4096 - Block 16x16 - 1D",
             "description": "",
-            "configurePreset": "opencl-grid2048x4096-block8x4-1d"
+            "configurePreset": "opencl-grid2048x4096-block16x16-1d"
         },
         {
-            "name": "cuda-grid2048x4096-block8x4-1d",
-            "displayName": "cuda - 2048x4096 - Block 8x4 - 1D",
+            "name": "cuda-grid2048x4096-block16x16-1d",
+            "displayName": "cuda - 2048x4096 - Block 16x16 - 1D",
             "description": "",
-            "configurePreset": "cuda-grid2048x4096-block8x4-1d"
+            "configurePreset": "cuda-grid2048x4096-block16x16-1d"
         },
         {
-            "name": "cpu-serial-grid2048x4096-block7x5-1d-unaligned",
-            "displayName": "cpu-serial - 2048x4096 - Block 7x5 - 1D - Bad",
+            "name": "cpu-serial-grid2048x4096-block9x9-1d-unaligned",
+            "displayName": "cpu-serial - 2048x4096 - Block 9x9 - 1D - Bad",
             "description": "",
-            "configurePreset": "cpu-serial-grid2048x4096-block7x5-1d-unaligned"
+            "configurePreset": "cpu-serial-grid2048x4096-block9x9-1d-unaligned"
         },
         {
-            "name": "cpu-parallel-grid2048x4096-block7x5-1d-unaligned",
-            "displayName": "cpu-parallel - 2048x4096 - Block 7x5 - 1D - Bad",
+            "name": "cpu-parallel-grid2048x4096-block9x9-1d-unaligned",
+            "displayName": "cpu-parallel - 2048x4096 - Block 9x9 - 1D - Bad",
             "description": "",
-            "configurePreset": "cpu-parallel-grid2048x4096-block7x5-1d-unaligned"
+            "configurePreset": "cpu-parallel-grid2048x4096-block9x9-1d-unaligned"
         },
         {
-            "name": "opencl-grid2048x4096-block7x5-1d-unaligned",
-            "displayName": "opencl - 2048x4096 - Block 7x5 - 1D - Bad",
+            "name": "opencl-grid2048x4096-block9x9-1d-unaligned",
+            "displayName": "opencl - 2048x4096 - Block 9x9 - 1D - Bad",
             "description": "",
-            "configurePreset": "opencl-grid2048x4096-block7x5-1d-unaligned"
+            "configurePreset": "opencl-grid2048x4096-block9x9-1d-unaligned"
         },
         {
-            "name": "cuda-grid2048x4096-block7x5-1d-unaligned",
-            "displayName": "cuda - 2048x4096 - Block 7x5 - 1D - Bad",
+            "name": "cuda-grid2048x4096-block9x9-1d-unaligned",
+            "displayName": "cuda - 2048x4096 - Block 9x9 - 1D - Bad",
             "description": "",
-            "configurePreset": "cuda-grid2048x4096-block7x5-1d-unaligned"
+            "configurePreset": "cuda-grid2048x4096-block9x9-1d-unaligned"
         },
         {
-            "name": "cpu-serial-grid8192x8192-block32x32-2d",
-            "displayName": "cpu-serial - 8192x8192 - Block 32x32 - 2D",
+            "name": "cpu-serial-grid8192x8192-block16x16-2d",
+            "displayName": "cpu-serial - 8192x8192 - Block 16x16 - 2D",
             "description": "",
-            "configurePreset": "cpu-serial-grid8192x8192-block32x32-2d"
+            "configurePreset": "cpu-serial-grid8192x8192-block16x16-2d"
         },
         {
-            "name": "cpu-parallel-grid8192x8192-block32x32-2d",
-            "displayName": "cpu-parallel - 8192x8192 - Block 32x32 - 2D",
+            "name": "cpu-parallel-grid8192x8192-block16x16-2d",
+            "displayName": "cpu-parallel - 8192x8192 - Block 16x16 - 2D",
             "description": "",
-            "configurePreset": "cpu-parallel-grid8192x8192-block32x32-2d"
+            "configurePreset": "cpu-parallel-grid8192x8192-block16x16-2d"
         },
         {
-            "name": "opencl-grid8192x8192-block32x32-2d",
-            "displayName": "opencl - 8192x8192 - Block 32x32 - 2D",
+            "name": "opencl-grid8192x8192-block16x16-2d",
+            "displayName": "opencl - 8192x8192 - Block 16x16 - 2D",
             "description": "",
-            "configurePreset": "opencl-grid8192x8192-block32x32-2d"
+            "configurePreset": "opencl-grid8192x8192-block16x16-2d"
         },
         {
-            "name": "cuda-grid8192x8192-block32x32-2d",
-            "displayName": "cuda - 8192x8192 - Block 32x32 - 2D",
+            "name": "cuda-grid8192x8192-block16x16-2d",
+            "displayName": "cuda - 8192x8192 - Block 16x16 - 2D",
             "description": "",
-            "configurePreset": "cuda-grid8192x8192-block32x32-2d"
+            "configurePreset": "cuda-grid8192x8192-block16x16-2d"
         },
         {
-            "name": "cpu-serial-grid8192x8192-block30x30-2d-unaligned",
-            "displayName": "cpu-serial - 8192x8192 - Block 30x30 - 2D - Bad",
+            "name": "cpu-serial-grid8192x8192-block9x9-2d-unaligned",
+            "displayName": "cpu-serial - 8192x8192 - Block 9x9 - 2D - Bad",
             "description": "",
-            "configurePreset": "cpu-serial-grid8192x8192-block30x30-2d-unaligned"
+            "configurePreset": "cpu-serial-grid8192x8192-block9x9-2d-unaligned"
         },
         {
-            "name": "cpu-parallel-grid8192x8192-block30x30-2d-unaligned",
-            "displayName": "cpu-parallel - 8192x8192 - Block 30x30 - 2D - Bad",
+            "name": "cpu-parallel-grid8192x8192-block9x9-2d-unaligned",
+            "displayName": "cpu-parallel - 8192x8192 - Block 9x9 - 2D - Bad",
             "description": "",
-            "configurePreset": "cpu-parallel-grid8192x8192-block30x30-2d-unaligned"
+            "configurePreset": "cpu-parallel-grid8192x8192-block9x9-2d-unaligned"
         },
         {
-            "name": "opencl-grid8192x8192-block30x30-2d-unaligned",
-            "displayName": "opencl - 8192x8192 - Block 30x30 - 2D - Bad",
+            "name": "opencl-grid8192x8192-block9x9-2d-unaligned",
+            "displayName": "opencl - 8192x8192 - Block 9x9 - 2D - Bad",
             "description": "",
-            "configurePreset": "opencl-grid8192x8192-block30x30-2d-unaligned"
+            "configurePreset": "opencl-grid8192x8192-block9x9-2d-unaligned"
         },
         {
-            "name": "cuda-grid8192x8192-block30x30-2d-unaligned",
-            "displayName": "cuda - 8192x8192 - Block 30x30 - 2D - Bad",
+            "name": "cuda-grid8192x8192-block9x9-2d-unaligned",
+            "displayName": "cuda - 8192x8192 - Block 9x9 - 2D - Bad",
             "description": "",
-            "configurePreset": "cuda-grid8192x8192-block30x30-2d-unaligned"
+            "configurePreset": "cuda-grid8192x8192-block9x9-2d-unaligned"
         },
         {
-            "name": "cpu-serial-grid8192x8192-block8x4-1d",
-            "displayName": "cpu-serial - 8192x8192 - Block 8x4 - 1D",
+            "name": "cpu-serial-grid8192x8192-block16x16-1d",
+            "displayName": "cpu-serial - 8192x8192 - Block 16x16 - 1D",
             "description": "",
-            "configurePreset": "cpu-serial-grid8192x8192-block8x4-1d"
+            "configurePreset": "cpu-serial-grid8192x8192-block16x16-1d"
         },
         {
-            "name": "cpu-parallel-grid8192x8192-block8x4-1d",
-            "displayName": "cpu-parallel - 8192x8192 - Block 8x4 - 1D",
+            "name": "cpu-parallel-grid8192x8192-block16x16-1d",
+            "displayName": "cpu-parallel - 8192x8192 - Block 16x16 - 1D",
             "description": "",
-            "configurePreset": "cpu-parallel-grid8192x8192-block8x4-1d"
+            "configurePreset": "cpu-parallel-grid8192x8192-block16x16-1d"
         },
         {
-            "name": "opencl-grid8192x8192-block8x4-1d",
-            "displayName": "opencl - 8192x8192 - Block 8x4 - 1D",
+            "name": "opencl-grid8192x8192-block16x16-1d",
+            "displayName": "opencl - 8192x8192 - Block 16x16 - 1D",
             "description": "",
-            "configurePreset": "opencl-grid8192x8192-block8x4-1d"
+            "configurePreset": "opencl-grid8192x8192-block16x16-1d"
         },
         {
-            "name": "cuda-grid8192x8192-block8x4-1d",
-            "displayName": "cuda - 8192x8192 - Block 8x4 - 1D",
+            "name": "cuda-grid8192x8192-block16x16-1d",
+            "displayName": "cuda - 8192x8192 - Block 16x16 - 1D",
             "description": "",
-            "configurePreset": "cuda-grid8192x8192-block8x4-1d"
+            "configurePreset": "cuda-grid8192x8192-block16x16-1d"
         },
         {
-            "name": "cpu-serial-grid8192x8192-block7x5-1d-unaligned",
-            "displayName": "cpu-serial - 8192x8192 - Block 7x5 - 1D - Bad",
+            "name": "cpu-serial-grid8192x8192-block9x9-1d-unaligned",
+            "displayName": "cpu-serial - 8192x8192 - Block 9x9 - 1D - Bad",
             "description": "",
-            "configurePreset": "cpu-serial-grid8192x8192-block7x5-1d-unaligned"
+            "configurePreset": "cpu-serial-grid8192x8192-block9x9-1d-unaligned"
         },
         {
-            "name": "cpu-parallel-grid8192x8192-block7x5-1d-unaligned",
-            "displayName": "cpu-parallel - 8192x8192 - Block 7x5 - 1D - Bad",
+            "name": "cpu-parallel-grid8192x8192-block9x9-1d-unaligned",
+            "displayName": "cpu-parallel - 8192x8192 - Block 9x9 - 1D - Bad",
             "description": "",
-            "configurePreset": "cpu-parallel-grid8192x8192-block7x5-1d-unaligned"
+            "configurePreset": "cpu-parallel-grid8192x8192-block9x9-1d-unaligned"
         },
         {
-            "name": "opencl-grid8192x8192-block7x5-1d-unaligned",
-            "displayName": "opencl - 8192x8192 - Block 7x5 - 1D - Bad",
+            "name": "opencl-grid8192x8192-block9x9-1d-unaligned",
+            "displayName": "opencl - 8192x8192 - Block 9x9 - 1D - Bad",
             "description": "",
-            "configurePreset": "opencl-grid8192x8192-block7x5-1d-unaligned"
+            "configurePreset": "opencl-grid8192x8192-block9x9-1d-unaligned"
         },
         {
-            "name": "cuda-grid8192x8192-block7x5-1d-unaligned",
-            "displayName": "cuda - 8192x8192 - Block 7x5 - 1D - Bad",
+            "name": "cuda-grid8192x8192-block9x9-1d-unaligned",
+            "displayName": "cuda - 8192x8192 - Block 9x9 - 1D - Bad",
             "description": "",
-            "configurePreset": "cuda-grid8192x8192-block7x5-1d-unaligned"
+            "configurePreset": "cuda-grid8192x8192-block9x9-1d-unaligned"
         },
         {
-            "name": "cpu-serial-grid32768x32768-block32x32-2d",
-            "displayName": "cpu-serial - 32768x32768 - Block 32x32 - 2D",
+            "name": "cpu-serial-grid32768x32768-block16x16-2d",
+            "displayName": "cpu-serial - 32768x32768 - Block 16x16 - 2D",
             "description": "",
-            "configurePreset": "cpu-serial-grid32768x32768-block32x32-2d"
+            "configurePreset": "cpu-serial-grid32768x32768-block16x16-2d"
         },
         {
-            "name": "cpu-parallel-grid32768x32768-block32x32-2d",
-            "displayName": "cpu-parallel - 32768x32768 - Block 32x32 - 2D",
+            "name": "cpu-parallel-grid32768x32768-block16x16-2d",
+            "displayName": "cpu-parallel - 32768x32768 - Block 16x16 - 2D",
             "description": "",
-            "configurePreset": "cpu-parallel-grid32768x32768-block32x32-2d"
+            "configurePreset": "cpu-parallel-grid32768x32768-block16x16-2d"
         },
         {
-            "name": "opencl-grid32768x32768-block32x32-2d",
-            "displayName": "opencl - 32768x32768 - Block 32x32 - 2D",
+            "name": "opencl-grid32768x32768-block16x16-2d",
+            "displayName": "opencl - 32768x32768 - Block 16x16 - 2D",
             "description": "",
-            "configurePreset": "opencl-grid32768x32768-block32x32-2d"
+            "configurePreset": "opencl-grid32768x32768-block16x16-2d"
         },
         {
-            "name": "cuda-grid32768x32768-block32x32-2d",
-            "displayName": "cuda - 32768x32768 - Block 32x32 - 2D",
+            "name": "cuda-grid32768x32768-block16x16-2d",
+            "displayName": "cuda - 32768x32768 - Block 16x16 - 2D",
             "description": "",
-            "configurePreset": "cuda-grid32768x32768-block32x32-2d"
+            "configurePreset": "cuda-grid32768x32768-block16x16-2d"
         },
         {
-            "name": "cpu-serial-grid32768x32768-block30x30-2d-unaligned",
-            "displayName": "cpu-serial - 32768x32768 - Block 30x30 - 2D - Bad",
+            "name": "cpu-serial-grid32768x32768-block9x9-2d-unaligned",
+            "displayName": "cpu-serial - 32768x32768 - Block 9x9 - 2D - Bad",
             "description": "",
-            "configurePreset": "cpu-serial-grid32768x32768-block30x30-2d-unaligned"
+            "configurePreset": "cpu-serial-grid32768x32768-block9x9-2d-unaligned"
         },
         {
-            "name": "cpu-parallel-grid32768x32768-block30x30-2d-unaligned",
-            "displayName": "cpu-parallel - 32768x32768 - Block 30x30 - 2D - Bad",
+            "name": "cpu-parallel-grid32768x32768-block9x9-2d-unaligned",
+            "displayName": "cpu-parallel - 32768x32768 - Block 9x9 - 2D - Bad",
             "description": "",
-            "configurePreset": "cpu-parallel-grid32768x32768-block30x30-2d-unaligned"
+            "configurePreset": "cpu-parallel-grid32768x32768-block9x9-2d-unaligned"
         },
         {
-            "name": "opencl-grid32768x32768-block30x30-2d-unaligned",
-            "displayName": "opencl - 32768x32768 - Block 30x30 - 2D - Bad",
+            "name": "opencl-grid32768x32768-block9x9-2d-unaligned",
+            "displayName": "opencl - 32768x32768 - Block 9x9 - 2D - Bad",
             "description": "",
-            "configurePreset": "opencl-grid32768x32768-block30x30-2d-unaligned"
+            "configurePreset": "opencl-grid32768x32768-block9x9-2d-unaligned"
         },
         {
-            "name": "cuda-grid32768x32768-block30x30-2d-unaligned",
-            "displayName": "cuda - 32768x32768 - Block 30x30 - 2D - Bad",
+            "name": "cuda-grid32768x32768-block9x9-2d-unaligned",
+            "displayName": "cuda - 32768x32768 - Block 9x9 - 2D - Bad",
             "description": "",
-            "configurePreset": "cuda-grid32768x32768-block30x30-2d-unaligned"
+            "configurePreset": "cuda-grid32768x32768-block9x9-2d-unaligned"
         },
         {
-            "name": "cpu-serial-grid32768x32768-block8x4-1d",
-            "displayName": "cpu-serial - 32768x32768 - Block 8x4 - 1D",
+            "name": "cpu-serial-grid32768x32768-block16x16-1d",
+            "displayName": "cpu-serial - 32768x32768 - Block 16x16 - 1D",
             "description": "",
-            "configurePreset": "cpu-serial-grid32768x32768-block8x4-1d"
+            "configurePreset": "cpu-serial-grid32768x32768-block16x16-1d"
         },
         {
-            "name": "cpu-parallel-grid32768x32768-block8x4-1d",
-            "displayName": "cpu-parallel - 32768x32768 - Block 8x4 - 1D",
+            "name": "cpu-parallel-grid32768x32768-block16x16-1d",
+            "displayName": "cpu-parallel - 32768x32768 - Block 16x16 - 1D",
             "description": "",
-            "configurePreset": "cpu-parallel-grid32768x32768-block8x4-1d"
+            "configurePreset": "cpu-parallel-grid32768x32768-block16x16-1d"
         },
         {
-            "name": "opencl-grid32768x32768-block8x4-1d",
-            "displayName": "opencl - 32768x32768 - Block 8x4 - 1D",
+            "name": "opencl-grid32768x32768-block16x16-1d",
+            "displayName": "opencl - 32768x32768 - Block 16x16 - 1D",
             "description": "",
-            "configurePreset": "opencl-grid32768x32768-block8x4-1d"
+            "configurePreset": "opencl-grid32768x32768-block16x16-1d"
         },
         {
-            "name": "cuda-grid32768x32768-block8x4-1d",
-            "displayName": "cuda - 32768x32768 - Block 8x4 - 1D",
+            "name": "cuda-grid32768x32768-block16x16-1d",
+            "displayName": "cuda - 32768x32768 - Block 16x16 - 1D",
             "description": "",
-            "configurePreset": "cuda-grid32768x32768-block8x4-1d"
+            "configurePreset": "cuda-grid32768x32768-block16x16-1d"
         },
         {
-            "name": "cpu-serial-grid32768x32768-block7x5-1d-unaligned",
-            "displayName": "cpu-serial - 32768x32768 - Block 7x5 - 1D - Bad",
+            "name": "cpu-serial-grid32768x32768-block9x9-1d-unaligned",
+            "displayName": "cpu-serial - 32768x32768 - Block 9x9 - 1D - Bad",
             "description": "",
-            "configurePreset": "cpu-serial-grid32768x32768-block7x5-1d-unaligned"
+            "configurePreset": "cpu-serial-grid32768x32768-block9x9-1d-unaligned"
         },
         {
-            "name": "cpu-parallel-grid32768x32768-block7x5-1d-unaligned",
-            "displayName": "cpu-parallel - 32768x32768 - Block 7x5 - 1D - Bad",
+            "name": "cpu-parallel-grid32768x32768-block9x9-1d-unaligned",
+            "displayName": "cpu-parallel - 32768x32768 - Block 9x9 - 1D - Bad",
             "description": "",
-            "configurePreset": "cpu-parallel-grid32768x32768-block7x5-1d-unaligned"
+            "configurePreset": "cpu-parallel-grid32768x32768-block9x9-1d-unaligned"
         },
         {
-            "name": "opencl-grid32768x32768-block7x5-1d-unaligned",
-            "displayName": "opencl - 32768x32768 - Block 7x5 - 1D - Bad",
+            "name": "opencl-grid32768x32768-block9x9-1d-unaligned",
+            "displayName": "opencl - 32768x32768 - Block 9x9 - 1D - Bad",
             "description": "",
-            "configurePreset": "opencl-grid32768x32768-block7x5-1d-unaligned"
+            "configurePreset": "opencl-grid32768x32768-block9x9-1d-unaligned"
         },
         {
-            "name": "cuda-grid32768x32768-block7x5-1d-unaligned",
-            "displayName": "cuda - 32768x32768 - Block 7x5 - 1D - Bad",
+            "name": "cuda-grid32768x32768-block9x9-1d-unaligned",
+            "displayName": "cuda - 32768x32768 - Block 9x9 - 1D - Bad",
             "description": "",
-            "configurePreset": "cuda-grid32768x32768-block7x5-1d-unaligned"
+            "configurePreset": "cuda-grid32768x32768-block9x9-1d-unaligned"
         }
     ]
 }

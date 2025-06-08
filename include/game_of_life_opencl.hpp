@@ -41,6 +41,11 @@ private:
     size_t   worldSize;
     #ifdef ARRAY_2D
     mutable std::vector<unsigned char*> rowPtrs;
+    size_t blocksX;
+    size_t blocksY;
+    #else
+    size_t blocks;
+    size_t blockSize = BLOCK_SIZE_X * BLOCK_SIZE_Y;
     #endif
 };
 

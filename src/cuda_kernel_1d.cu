@@ -1,30 +1,35 @@
 using ubyte = unsigned char;
 
-__global__ void life_step_kernel1d(const ubyte* grid, ubyte* next,
-                                 int width, int height)
-{
-    int idx = blockIdx.x * blockDim.x + threadIdx.x;
-    int stride = blockDim.x * gridDim.x;
-    int worldSize = width * height;
-
-    for (int cell = idx; cell < worldSize; cell += stride) {
-        int x = cell % width, y = cell / width;
-        int xm1 = (x + width - 1) % width;
-        int xp1 = (x + 1) % width;
-        int ym1 = (y + height - 1) % height;
-        int yp1 = (y + 1) % height;
-
-        int count = 0;
-        count += grid[ym1 * width + xm1];
-        count += grid[ym1 * width +  x ];
-        count += grid[ym1 * width + xp1];
-        count += grid[y    * width + xm1];
-        count += grid[y    * width + xp1];
-        count += grid[yp1 * width + xm1];
-        count += grid[yp1 * width +  x ];
-        count += grid[yp1 * width + xp1];
-
-        ubyte alive = grid[y * width + x];
-        next[y * width + x] = (count == 3 || (count == 2 && alive)) ? 1 : 0;
+__global__ void life_step_kernel1d(
+    ubyte* grid,
+    ubyte* next,
+    int width,
+    int height,
+    int cells_per_thread
+) {
+    const int total = width * height;
+    const int tid = blockIdx.x * blockDim.x + threadIdx.x;
+    const int start = tid * cells_per_thread;
+    
+    for (int i = 0; i < cells_per_thread; i++) {
+        const int idx = start + i;
+        if (idx >= total) return;
+        
+        const int x = idx % width;
+        const int y = idx / width;
+        
+        ubyte alive = 0;
+        for (int dy = -1; dy <= 1; dy++) {
+            for (int dx = -1; dx <= 1; dx++) {
+                if (dx == 0 && dy == 0) continue;
+                
+                const int nx = (x + dx + width) % width;
+                const int ny = (y + dy + height) % height;
+                alive += grid[ny * width + nx];
+            }
+        }
+        
+        const ubyte cell = grid[idx];
+        next[idx] = (alive == 3) || (cell && alive == 2) ? 1 : 0;
     }
 }

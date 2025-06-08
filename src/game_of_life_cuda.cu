@@ -21,10 +21,13 @@ GameOfLifeCUDA::GameOfLifeCUDA()
       h_grid(worldSize), h_next(worldSize)
 {
     #ifdef ARRAY_2D
-    blocksX = (cols + BLOCK_SIZE_X - 1) / BLOCK_SIZE_X;
-    blocksY = (rows + BLOCK_SIZE_Y - 1) / BLOCK_SIZE_Y;
+        unsigned int finalSizeX = BLOCK_SIZE_X * TILE_WIDTH;
+        unsigned int finalSizeY = BLOCK_SIZE_Y * TILE_HEIGHT;
+        blocksX = ((GRID_COLS + finalSizeX - 1) / finalSizeX);
+        blocksY = ((GRID_ROWS + finalSizeY - 1) / finalSizeY);
     #else
-    blocks = (worldSize + blockSize - 1) / blockSize;
+        unsigned int finalSize = blockSize * CELLS_PER_THREAD;
+        blocks = (worldSize + finalSize - 1) / finalSize;
     #endif
     allocDevice();
 }
@@ -107,9 +110,9 @@ void GameOfLifeCUDA::step() {
 #ifdef ARRAY_2D
     dim3 threads(BLOCK_SIZE_X, BLOCK_SIZE_Y);
     dim3 blocks(blocksX, blocksY);
-    life_step_kernel2d<<<blocks, threads>>>(d_grid, d_next, cols, rows);
+    life_step_kernel2d<<<blocks, threads>>>(d_grid, d_next, cols, rows, TILE_WIDTH, TILE_HEIGHT);
 #else
-    life_step_kernel1d<<<blocks, blockSize>>>(d_grid, d_next, cols, rows);
+    life_step_kernel1d<<<blocks, blockSize>>>(d_grid, d_next, cols, rows, CELLS_PER_THREAD);
 #endif
     checkCuda(cudaGetLastError(), "launch kernel");
     checkCuda(cudaDeviceSynchronize(), "sync");

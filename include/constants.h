@@ -21,4 +21,11 @@
 #define BLOCK_SIZE_Y 32
 #endif
 
+#ifdef ARRAY_2D
+    #define TILE_WIDTH (static_cast<unsigned int>(sqrt(BLOCK_SIZE_X)))
+    #define TILE_HEIGHT (static_cast<unsigned int>(sqrt(BLOCK_SIZE_Y)))
+#else
+    #define CELLS_PER_THREAD (static_cast<unsigned int>(sqrt(BLOCK_SIZE_X * BLOCK_SIZE_Y)))
+#endif
+
 #endif

@@ -27,10 +27,9 @@ def get_cmd_args(preset):
         raise ValueError(f"Missing grid or block dimensions in preset {name}")
 
     if is_2d:
-        filename = SOURCE_DIR / "data" / f"{name}_{rows}x{cols}_{bx}x{by}_2d.csv"
+        filename = SOURCE_DIR / "data" / f"{name}.csv"
     else:
-        bprod = bx * by
-        filename = SOURCE_DIR / "data" / f"{name}_{rows}x{cols}_{bprod}_1d.csv"
+        filename = SOURCE_DIR / "data" / f"{name}.csv"
 
     return ["16", str(filename)]
 
