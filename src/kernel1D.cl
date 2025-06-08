@@ -28,6 +28,6 @@ __kernel void life(
         }
         
         const uchar cell = current[idx];
-        next[idx] = (alive == 3) || (cell && alive == 2);
+        next[idx] = (alive == 3) || (cell && alive == 2) ? 1 : 0;
     }
 }

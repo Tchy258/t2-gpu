@@ -118,7 +118,7 @@ void GameOfLifeOpenCL::step() {
     #else
     lifeKernel.setArg(arg++, CELLS_PER_THREAD);
     cl::NDRange local(BLOCK_SIZE_X * BLOCK_SIZE_Y);
-    cl::NDRange global(worldSize);
+    cl::NDRange global(blocks);
     #endif
     queue_cpp.enqueueNDRangeKernel(lifeKernel, cl::NullRange, global, local);
     queue_cpp.finish();
