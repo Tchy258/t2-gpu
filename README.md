@@ -1,7 +1,7 @@
 # Tarea 2 - OpenCL y CUDA
 
 Este código corresponde a la Tarea 2 - OpenCL y CUDA de Nicolás Escobar y Vicente Muñoz, alumnos del curso CC7515 Computación en GPU del semestre otoño de 2025. Esta tarea trata sobre implementar El Juego de la Vida de Conway, tanto en CPU como en GPU haciendo uso de CUDA y OpenCL en C++, para luego comparar su desempeño en los distintos entornos y además elegir 2 variaciones que impactan su rendimiento y medir su desempeño. Las variaciones escogidas fueron:
-1. Usar tamaños de bloque tanto múltiplos de 32 como no múltiplos de 32. En particular se usan tamaños de bloque 30, 32 y 35.
+1. Usar tamaños de bloque tanto múltiplos de 32 como no múltiplos de 32. En particular se usan tamaños de bloque 256 (16x16) y 81 (9x9) respectivamente.
 2. Usar arreglos de dos dimensiones en vez de un mapeo a arreglo de una dimensión.
 
 ## Herramientas necesarias
